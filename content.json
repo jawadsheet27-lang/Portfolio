@@ -8,7 +8,7 @@
     "word3": "GROW.",
     "lead": "I build sharp digital experiences and visual identities for people and brands ready to be noticed — websites, apps, logos, menus, and advertising that actually moves.",
     "badge": "Available for projects",
-    "badgeSub": "Beirut · Remote worldwide"
+    "badgeSub": "Beirut · Remote Worldwide"
   },
   "marquee": [
     "Websites",
@@ -173,19 +173,24 @@
     "copy": "I'm Jawad Sheet, a university student at LIU based in Beirut, Lebanon. I work across development and design, combining technology with visual direction. My goal is simple: create work that looks memorable, feels useful, and helps the people behind it move forward.",
     "stats": [
       {
-        "value": "6",
+        "value": "29",
         "suffix": "",
         "label": "Concept projects"
       },
       {
-        "value": "4",
+        "value": "9",
         "suffix": "",
         "label": "Service areas"
       },
       {
-        "value": "24",
+        "value": "12",
         "suffix": "h",
         "label": "Reply time"
+      },
+      {
+        "value": "1-2",
+        "suffix": " Days",
+        "label": "Project time"
       }
     ],
     "facts": [
