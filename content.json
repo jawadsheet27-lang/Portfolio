@@ -1,0 +1,222 @@
+{
+  "brand": "JAWAD SHEET",
+  "profileImage": "assets/profile.jpg",
+  "hero": {
+    "eyebrow": "Creative developer · Designer · LIU student",
+    "word1": "BUILD.",
+    "word2": "DESIGN.",
+    "word3": "GROW.",
+    "lead": "I build sharp digital experiences and visual identities for people and brands ready to be noticed — websites, apps, logos, menus, and advertising that actually moves.",
+    "badge": "Available for projects",
+    "badgeSub": "Beirut · Remote worldwide"
+  },
+  "marquee": [
+    "Websites",
+    "Mobile apps",
+    "Brand identity",
+    "Logos",
+    "Menu design",
+    "Advertising flow",
+    "Motion & interaction",
+    "Beirut, Lebanon"
+  ],
+  "services": {
+    "title": "From first idea to polished launch.",
+    "intro": "Creative and technical work shaped around one goal: look professional, communicate clearly, and earn attention.",
+    "items": [
+      {
+        "title": "Web experiences",
+        "desc": "Responsive websites, landing pages and portfolios with strong visual direction and clear user journeys."
+      },
+      {
+        "title": "App concepts",
+        "desc": "Interface design and prototypes built around intuitive flows and a consistent visual system."
+      },
+      {
+        "title": "Logos & menus",
+        "desc": "Identities, logos, menus and branded materials that make a business instantly recognizable."
+      },
+      {
+        "title": "Advertising & growth",
+        "desc": "Campaign direction, content flow and promo material built to turn attention into real clients."
+      }
+    ]
+  },
+  "work": {
+    "title": "Concepts with character.",
+    "intro": "Web directions and identity work across sports, eyewear, beauty, branding, hospitality and fragrance."
+  },
+  "projects": [
+    {
+      "visual": "vanta",
+      "mark": "VANTA",
+      "image": "",
+      "alt": "",
+      "bg": "",
+      "title": "VANTA Run",
+      "desc": "Immersive sports-performance web concept with motion-led storytelling.",
+      "kind": "Web concept"
+    },
+    {
+      "visual": "umbra",
+      "mark": "UMBRA",
+      "image": "",
+      "alt": "",
+      "bg": "",
+      "title": "UMBRA Eyewear",
+      "desc": "Dark luxury sunglasses experience with product-focused interaction.",
+      "kind": "E-commerce concept"
+    },
+    {
+      "visual": "shot",
+      "mark": "Velours",
+      "image": "assets/velours.jpg",
+      "alt": "Luxury lipstick product photograph in gold case on a dark reflective surface",
+      "bg": "",
+      "title": "VELOURS Beauty",
+      "desc": "Editorial lip-brand concept built around real product photography and premium shade storytelling.",
+      "kind": "Beauty concept"
+    },
+    {
+      "visual": "nova",
+      "mark": "NOVA",
+      "image": "",
+      "alt": "",
+      "bg": "",
+      "title": "NOVA Branding",
+      "desc": "High-energy agency direction with bold typography and dimensional visuals.",
+      "kind": "Branding concept"
+    },
+    {
+      "visual": "light",
+      "mark": "",
+      "image": "assets/squirrels.jpg",
+      "alt": "Squirrels Park logo design with squirrel, acorn and flame shape",
+      "bg": "#ffffff",
+      "title": "Squirrels Park",
+      "desc": "Playful mascot logo built on a flame silhouette, an acorn and custom lettering for a family park brand.",
+      "kind": "Logo design"
+    },
+    {
+      "visual": "light",
+      "mark": "",
+      "image": "assets/orris.jpg",
+      "alt": "ORRIS Parfums logo system presentation with gold monogram and light and dark versions",
+      "bg": "#efe8dc",
+      "title": "ORRIS Parfums",
+      "desc": "Full gold-foil identity system: main logo, monogram icon, light and dark versions, and social profile mark.",
+      "kind": "Brand identity"
+    }
+  ],
+  "motion": {
+    "title": "Work that moves.",
+    "intro": "Short walkthroughs of live interfaces in context. Videos play as you scroll — tap the speaker for sound, tap a card to open it full size."
+  },
+  "reels": [
+    {
+      "src": "assets/reel-1.mp4",
+      "poster": "assets/poster-1.jpg",
+      "ratio": "9/16",
+      "title": "Brief to build — turning a client request into a finished site",
+      "cap": "Brief to build",
+      "sub": "Turning a simple client request into a finished site"
+    },
+    {
+      "src": "assets/reel-2.mp4",
+      "poster": "assets/poster-2.jpg",
+      "ratio": "25/22",
+      "title": "Café menu and ordering interface for a coffee brand",
+      "cap": "Café menu & ordering UI",
+      "sub": "Clean product layout for a coffee brand"
+    },
+    {
+      "src": "assets/reel-3.mp4",
+      "poster": "assets/poster-3.jpg",
+      "ratio": "29/52",
+      "title": "Branding site in motion with animated hero and 3D visuals",
+      "cap": "Branding site in motion",
+      "sub": "Animated hero and 3D visuals on desktop"
+    },
+    {
+      "src": "assets/reel-4.mp4",
+      "poster": "assets/poster-4.jpg",
+      "ratio": "29/52",
+      "title": "Beauty brand experience with editorial typography and product motion",
+      "cap": "Beauty brand experience",
+      "sub": "Editorial typography and product motion"
+    }
+  ],
+  "process": {
+    "title": "How a project runs.",
+    "intro": "Clear steps, fast feedback, and no guessing. You always know what stage we are at.",
+    "steps": [
+      {
+        "title": "Brief",
+        "desc": "We talk about the goal, the audience and what success looks like."
+      },
+      {
+        "title": "Direction",
+        "desc": "I set the visual language: type, color, layout and tone."
+      },
+      {
+        "title": "Build",
+        "desc": "Design becomes a real, responsive, fast product."
+      },
+      {
+        "title": "Launch & grow",
+        "desc": "We publish, then improve with content and promotion."
+      }
+    ]
+  },
+  "about": {
+    "quote": "Creative thinking, built with a practical mindset.",
+    "copy": "I'm Jawad Sheet, a university student at LIU based in Beirut, Lebanon. I work across development and design, combining technology with visual direction. My goal is simple: create work that looks memorable, feels useful, and helps the people behind it move forward.",
+    "stats": [
+      {
+        "value": "6",
+        "suffix": "",
+        "label": "Concept projects"
+      },
+      {
+        "value": "4",
+        "suffix": "",
+        "label": "Service areas"
+      },
+      {
+        "value": "24",
+        "suffix": "h",
+        "label": "Reply time"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Based in",
+        "value": "Beirut, Lebanon"
+      },
+      {
+        "label": "Current chapter",
+        "value": "LIU university student"
+      },
+      {
+        "label": "Focus",
+        "value": "Web, apps, identity & promotion"
+      },
+      {
+        "label": "Working style",
+        "value": "Creative, direct & collaborative"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Have a project in mind?",
+    "title": "Let's make it *impossible* to ignore.",
+    "text": "Tell me what you're building and where you want to go. I'll turn it into a focused digital or visual experience."
+  },
+  "contact": {
+    "email": "jawadsheet27@gmail.com",
+    "phoneDigits": "96181191013",
+    "phoneDisplay": "+961 81 191 013",
+    "linkedin": "https://www.linkedin.com/in/jawad-sheet-625016428/",
+    "location": "Beirut, Lebanon"
+  }
+}

@@ -1,0 +1,133 @@
+HOW TO EDIT YOUR WEBSITE
+========================
+
+THERE ARE TWO WAYS. PICK ONE.
+
+  WAY 1 (easy)   Open  yourdomain.com/admin  , log in, change what you want,
+                 press Publish. No code at all. To switch this on the first
+                 time, follow DEPLOY-ADMIN.txt.
+
+  WAY 2 (manual) Edit the files on your computer and upload them again.
+                 That is what the rest of this guide explains.
+
+
+GOLDEN RULE
+Before you change anything, make a copy of the file you are about to edit.
+If an edit goes wrong, delete the broken file and rename the copy back.
+You can never really break it.
+
+
+WHICH FILE DO I EDIT?
+---------------------
+content.json   ALL the words, and which picture each project uses.
+               This is the easy one. The admin panel writes this same file.
+index.html     The design, the colours, the layout, the animations.
+assets/        Your photos and videos.
+
+If you only want to change words or projects, edit content.json and leave
+index.html alone.
+
+
+WHAT YOU NEED
+Any plain text editor. Free and good: VS Code (code.visualstudio.com).
+Notepad or TextEdit also work. Do NOT use Microsoft Word - it destroys files.
+
+
+EDITING content.json
+--------------------
+It looks like this:
+
+    "title": "Squirrels Park",
+    "desc": "Playful mascot logo built on a flame silhouette...",
+    "kind": "Logo design"
+
+Only change what is between the "quotes" AFTER the colon.
+Keep every quote mark and every comma exactly where it is.
+
+  SAFE:      "title": "Squirrels Cafe",
+  BROKEN:    title: Squirrels Cafe          (quotes and comma removed)
+
+After saving, open your site. If a section suddenly shows the old text, one
+quote or comma is missing - the site then ignores content.json on purpose so
+it can never look broken to a visitor. Fix the punctuation and reload.
+
+REMOVE A PROJECT
+In content.json find "projects": [  and delete one whole block from its
+opening {  to its closing }  , plus the comma after it.
+
+ADD A PROJECT
+Copy a whole block from {  to }  , paste it after, add a comma between them,
+then change the words. For "image" put a picture in the assets folder and
+write  "image": "assets/your-photo.jpg"
+
+CARD STYLES for "visual"
+    "light"   photo on a light background (best for logos)
+    "shot"    photo, dark and moody (best for product photos)
+    "vanta"   drawn card: sport lines
+    "umbra"   drawn card: sunglasses
+    "nova"    drawn card: glowing orb
+
+CHANGE YOUR PHONE OR EMAIL
+In content.json, at the bottom, edit "contact". Every button, the footer and
+the printed CV all update from those few lines.
+    "phoneDigits" is used for the WhatsApp and Call links: digits only,
+    starting with the country code, no + and no spaces.
+
+CHANGE A PHOTO
+Put the new photo in the assets folder, then point to it, for example
+    "profileImage": "assets/my-new-photo.jpg"
+Keep photos under about 1500 pixels wide so the site stays fast.
+
+ADD OR REMOVE A VIDEO
+Put the .mp4 in the assets folder, then in "reels" copy a block and set
+    "src": "assets/my-video.mp4"
+Keep clips short (under 20 seconds) and under about 4 MB.
+To remove one, delete its whole block.
+
+
+EDITING index.html (design, not words)
+--------------------------------------
+Press Ctrl+F and search for these labels to jump around:
+    TOP MENU
+    01  SERVICES
+    02  SELECTED WORK
+    03  MOTION
+    04  PROCESS
+    05  ABOUT
+    CONTACT
+    FOOTER
+
+CHANGE THE GOLD COLOUR
+Search for   --gold:#c6a66b   and change that colour code. Every gold detail
+updates at once.
+
+CHANGE THE MENU LINK NAMES
+Search for  TOP MENU  and edit only the words between > and < .
+Never change the  href="#work"  part.
+
+RULE FOR HTML
+Only change the words you can read on the site. Never change anything inside
+< and > - that is the machinery.
+
+
+PUTTING THE NEW VERSION ONLINE
+------------------------------
+If you used the admin panel: it already happened.
+If you edited files by hand: upload the changed files to GitHub (Add file ->
+Upload files, same names, Commit changes). Vercel rebuilds automatically in
+about 30 seconds. Your address never changes.
+
+Always keep index.html, content.json and the assets folder together.
+
+
+IF SOMETHING BREAKS
+-------------------
+You deleted one character too many. That is all it ever is.
+Use your backup, or restore the previous version in GitHub, or send me the
+file and I will repair it.
+
+
+EASIEST OPTION OF ALL
+---------------------
+Tell me what you want changed and I will do it, test it, and send you the new
+files. You are not stuck with anything on this site.
