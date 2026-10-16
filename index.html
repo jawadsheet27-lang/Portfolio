@@ -1,934 +1,307 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YK1092Z2J5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YK1092Z2J5');
-</script> 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jawad Sheet — creative developer and designer in Beirut, Lebanon. Websites, apps, brand identity, logos, menus and advertising concepts.">
-<meta name="theme-color" content="#0b0b0c">
-<meta name="author" content="Jawad Sheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XARV — Websites, Branding &amp; Advertising for Local Businesses in Lebanon</title>
+<meta name="description" content="XARV is a creative studio in Beirut helping local businesses get noticed — websites, apps, logos, menus, advertising, and appointment systems. Replies within 24h.">
+<link rel="canonical" href="https://xarv.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jawad Sheet — Creative Developer &amp; Designer">
-<meta property="og:description" content="Websites, apps, brand identity, logos, menus and advertising concepts. Based in Beirut, Lebanon.">
-<meta property="og:image" content="assets/og-cover.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="XARV">
+<meta property="og:title" content="XARV — Build. Design. Grow.">
+<meta property="og:description" content="Websites, branding, advertising and booking systems for local businesses in Lebanon. Replies within 24h.">
+<meta property="og:image" content="https://xarv.vercel.app/assets/og-cover.jpg">
+<meta property="og:url" content="https://xarv.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jawad Sheet — Creative Developer &amp; Designer">
-<meta name="twitter:description" content="Websites, apps, brand identity, logos, menus and advertising concepts. Based in Beirut, Lebanon.">
-<meta name="twitter:image" content="assets/og-cover.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='40' font-weight='bold' fill='%23c6a66b' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
-<title>Jawad Sheet — Creative Developer &amp; Designer</title>
-<style>
-:root{--ink:#0b0b0c;--ink2:#121214;--paper:#f2eee7;--gold:#c6a66b;--gold2:#e4d0a2;--muted:#a29e97;--line:rgba(255,255,255,.14);--max:1180px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.5;overflow-x:hidden}
-body.lock{overflow:hidden}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-img,video{display:block;max-width:100%}
-:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
-.container{width:min(var(--max),calc(100% - 64px));margin:auto}
-.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
-.glow{position:fixed;width:520px;height:520px;left:0;top:0;border-radius:50%;background:radial-gradient(circle,rgba(198,166,107,.14),transparent 62%);transform:translate3d(60vw,10vh,0) translate(-50%,-50%);pointer-events:none;z-index:0}
-.progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),#fff);z-index:46;pointer-events:none}
-.cur{position:fixed;left:0;top:0;z-index:60;pointer-events:none;border-radius:50%;mix-blend-mode:difference;transform:translate(-50%,-50%)}
-.cur-dot{width:7px;height:7px;background:#fff}
-.cur-ring{width:36px;height:36px;border:1px solid rgba(255,255,255,.85);transition:width .2s,height .2s,opacity .2s}
-.cur-ring.big{width:70px;height:70px}
-@media(hover:none){.cur{display:none}}
-.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:700}
-.num{font-size:12px;color:var(--gold);letter-spacing:.18em}
-.section{padding:110px 0;border-top:1px solid var(--line);position:relative}
-.section-head{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:52px}
-.section-head h2{font-size:clamp(40px,5.6vw,74px);line-height:.96;letter-spacing:-.06em;margin:12px 0 0;max-width:760px}
-.section-head p{max-width:370px;color:var(--muted);margin:0;font-size:16px}
-.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 22px;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-weight:700;font-size:14px;background:transparent;color:var(--paper);transition:background .25s,color .25s,border-color .25s}
-.btn:hover,.btn:focus-visible{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.gold{background:var(--gold);border-color:var(--gold);color:#17140f}
-.btn.gold:hover,.btn.gold:focus-visible{background:var(--gold2);border-color:var(--gold2)}
-nav{position:fixed;top:0;left:0;right:0;z-index:40;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(11,11,12,.88);backdrop-filter:blur(16px);border-color:var(--line)}
-.nav-in{height:74px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800;letter-spacing:.16em;font-size:15px}
-.nav-links{display:flex;gap:26px;align-items:center;font-size:13px}
-.nav-links a:not(.btn){color:#c9c5be;position:relative;padding:6px 0}
-.nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .3s}
-.nav-links a:not(.btn):hover::after,.nav-links a.active::after{right:0}
-.nav-links a.active{color:#fff}
-.menu-btn{display:none;width:48px;height:48px;border:0;background:transparent;color:#fff;font-size:22px}
-.hero{min-height:100svh;padding:120px 0 56px;display:flex;align-items:center;position:relative}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.9),rgba(11,11,12,.3) 50%,rgba(11,11,12,.82))}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:28px;align-items:center}
-.hero h1{font-size:clamp(60px,10vw,142px);line-height:.8;letter-spacing:-.075em;font-weight:800;margin:26px 0 26px}
-.hero h1 .row{display:block;overflow:hidden}
-.hero h1 .row i{display:inline-block;font-style:normal;transform:translateY(110%);animation:rise 1s cubic-bezier(.19,.9,.22,1) forwards}
-.hero h1 .hollow i{color:transparent;-webkit-text-stroke:1px rgba(242,238,231,.55)}
-@keyframes rise{to{transform:none}}
-.type-line{font-family:Menlo,Consolas,monospace;font-size:14px;color:var(--gold2);min-height:22px;letter-spacing:.02em}
-.caret{display:inline-block;width:8px;height:15px;background:var(--gold2);vertical-align:-2px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero-lead{display:grid;grid-template-columns:52px minmax(0,540px);gap:18px;margin-top:22px}
-.hero-lead .line{height:1px;background:var(--gold);margin-top:13px}
-.hero-lead p{margin:0;color:#c6c2bb;font-size:17px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.portrait-wrap{position:relative;justify-self:end;width:min(410px,37vw);aspect-ratio:4/5;will-change:transform}
-.portrait{width:100%;height:100%;object-fit:cover;object-position:50% 34%;border-radius:210px 210px 20px 20px;filter:saturate(.85) contrast(1.05);border:1px solid rgba(255,255,255,.18)}
-.portrait-wrap::before{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1px solid rgba(198,166,107,.42);border-radius:230px 230px 26px 26px}
-.portrait-tag{position:absolute;bottom:26px;left:-44px;background:rgba(18,18,20,.86);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:12px;padding:13px 17px;min-width:206px}
-.portrait-tag strong{display:block;font-size:14px}
-.portrait-tag span{color:var(--muted);font-size:12px}
-.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:#72BC8F;margin-right:8px;box-shadow:0 0 0 0 rgba(114,188,143,.7);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(114,188,143,0)}100%{box-shadow:0 0 0 0 rgba(114,188,143,0)}}
-.scroll-note{position:absolute;bottom:24px;right:32px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;pointer-events:none}
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--ink2)}
-.mq-track{display:flex;gap:44px;width:max-content;animation:slide 32s linear infinite}
-.marquee:hover .mq-track{animation-play-state:paused}
-.mq-track span{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#a8a49d;display:flex;align-items:center;gap:44px}
-.mq-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
-@keyframes slide{to{transform:translateX(-50%)}}
-.services{border-top:1px solid var(--line)}
-.service{display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;padding:30px 6px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;transition:padding-left .3s}
-.service::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(198,166,107,.12),transparent 60%);opacity:0;transition:opacity .3s}
-.service:hover::before{opacity:1}
-.service:hover{padding-left:20px}
-.service h3{font-size:clamp(26px,3.4vw,40px);letter-spacing:-.04em;margin:0}
-.service p{color:var(--muted);margin:8px 0 0;max-width:520px;font-size:15px}
-.service .arrow{font-size:26px;color:var(--gold);transform:rotate(-45deg) scale(.9);transition:transform .3s}
-.service:hover .arrow{transform:none}
-.work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:26px}
-.project{grid-column:span 6;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--ink2);transition:border-color .3s,box-shadow .3s;will-change:transform}
-.project:nth-child(even){margin-top:46px}
-.project:hover{border-color:rgba(198,166,107,.55);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-.project-visual{height:380px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.project-visual img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.project:hover .project-visual img{transform:scale(1.05)}
-.project-visual.light{background:#f5f2ec}
-.project-visual.light img{object-fit:contain;padding:12px}
-.project-meta{padding:22px 24px 26px;display:flex;justify-content:space-between;gap:16px;align-items:start}
-.project h3{font-size:25px;letter-spacing:-.035em;margin:0 0 6px}
-.project p{margin:0;color:var(--muted);font-size:14px;max-width:400px}
-.kind{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);white-space:nowrap;margin-top:7px}
-.vanta{background:radial-gradient(circle at 30% 20%,#345f67,transparent 36%),linear-gradient(145deg,#10191b,#060708)}
-.vanta .word{font-size:clamp(58px,7.6vw,98px);font-style:italic;font-weight:900;letter-spacing:-.09em;transform:skew(-10deg);text-shadow:10px 10px 0 rgba(255,255,255,.08)}
-.vanta .track{position:absolute;left:-5%;right:-5%;bottom:54px;height:2px;background:#e6ff51;transform:rotate(-7deg);box-shadow:0 0 26px #e6ff51}
-.umbra{background:radial-gradient(circle at 50% 45%,#3d3528,transparent 32%),linear-gradient(145deg,#171513,#050505)}
-.glasses{width:74%;height:116px;display:flex;gap:20px;filter:drop-shadow(0 18px 22px #000)}
-.lens{flex:1;border:11px solid #c0a46c;border-radius:12px 12px 50% 50%;background:linear-gradient(145deg,#151515,#5e4b2d);position:relative}
-.lens:first-child::after{content:"";position:absolute;width:30px;height:9px;background:#c0a46c;right:-34px;top:16px}
-.umbra .mark{position:absolute;bottom:22px;left:26px;font-family:Georgia,serif;font-size:42px;letter-spacing:.18em}
-.nova{background:radial-gradient(circle at 18% 24%,#6b36ce,transparent 35%),radial-gradient(circle at 78% 70%,#ef477a,transparent 30%),#0d0718}
-.orb{width:180px;height:180px;border-radius:38% 62% 58% 42%;background:linear-gradient(135deg,#ffb449,#ff3e86 45%,#7146ff);box-shadow:0 0 70px rgba(255,68,149,.4);animation:float 5s ease-in-out infinite}
-.nova .mark{position:absolute;font-size:68px;font-weight:900;letter-spacing:-.08em;mix-blend-mode:overlay}
-@keyframes float{50%{transform:translateY(-14px) rotate(12deg)}}
-.shot{position:relative}
-.shot .veil{position:absolute;inset:0;background:linear-gradient(200deg,rgba(0,0,0,.05),rgba(0,0,0,.55))}
-.shot .mark{position:absolute;left:26px;bottom:22px;font-family:Georgia,serif;font-style:italic;font-size:40px;letter-spacing:.02em}
-.rail-wrap{position:relative}
-.rail{display:flex;gap:20px;overflow-x:auto;padding:6px 2px 20px;scroll-snap-type:x mandatory;scrollbar-width:thin}
-.reel{position:relative;flex:0 0 auto;height:470px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#101011;scroll-snap-align:center;transition:border-color .3s,transform .3s;cursor:pointer}
-.reel:hover{border-color:rgba(198,166,107,.55);transform:translateY(-4px)}
-.reel video{height:100%;width:100%;object-fit:cover}
-.reel .cap{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.88));font-size:13px;pointer-events:none}
-.reel .cap b{display:block;font-size:15px;margin-bottom:3px}
-.reel .cap span{color:#b8b4ad}
-.reel .sound{position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.5);color:#fff;font-size:15px;display:grid;place-items:center;backdrop-filter:blur(8px)}
-.rail-hint{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-.process{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
-.terminal{border:1px solid var(--line);border-radius:14px;background:#0e0e10;overflow:hidden;font-family:Menlo,Consolas,monospace;font-size:13.5px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:#131315}
-.tdot{width:11px;height:11px;border-radius:50%;background:#3a3a3d}
-.tdot.r{background:#e56458}.tdot.y{background:#d5a03b}.tdot.g{background:#46a171}
-.term-bar span{margin-left:10px;color:#8c8880;font-size:12px}
-.term-body{padding:20px;min-height:330px}
-.tline{display:flex;gap:10px;margin-bottom:9px;opacity:0;transform:translateY(6px);transition:opacity .45s,transform .45s;color:#d8d4cd}
-.tline.in{opacity:1;transform:none}
-.tline .p{color:var(--gold)}
-.tline.ok .p{color:#72BC8F}
-.tline.dim{color:#8c8880}
-.steps{list-style:none;margin:26px 0 0;padding:0;counter-reset:s}
-.steps li{counter-increment:s;padding:16px 0 16px 52px;border-top:1px solid var(--line);position:relative;color:var(--muted);font-size:15px}
-.steps li b{display:block;color:var(--paper);font-size:17px;margin-bottom:4px}
-.steps li::before{content:"0" counter(s);position:absolute;left:0;top:16px;color:var(--gold);font-size:12px;letter-spacing:.16em}
-.about-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:66px;align-items:start}
-.about-quote{font-family:Georgia,serif;font-size:clamp(32px,4.4vw,56px);line-height:1.08;letter-spacing:-.035em;margin:16px 0 0}
-.about-copy{color:#c1bdb6;font-size:17px;max-width:620px;margin:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
-.stat{background:var(--ink);padding:22px}
-.stat b{display:block;font-size:40px;letter-spacing:-.05em;line-height:1}
-.stat span{color:var(--muted);font-size:13px;display:block;margin-top:6px}
-.facts{margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.fact{background:var(--ink);padding:22px}
-.fact b{display:block;color:var(--gold2);font-size:13px;margin-bottom:6px}
-.fact span{color:var(--muted);font-size:14px}
-.cta{padding:126px 0;text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--line)}
-.cta h2{font-size:clamp(50px,8.4vw,116px);line-height:.88;letter-spacing:-.075em;margin:18px auto 30px;max-width:980px}
-.cta h2 em{font-family:Georgia,serif;font-weight:400;color:var(--gold2)}
-.cta p{color:var(--muted);max-width:540px;margin:0 auto 30px}
-.cta .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-footer{border-top:1px solid var(--line);padding:28px 0}
-.foot{display:flex;justify-content:space-between;gap:22px;align-items:center;color:var(--muted);font-size:12px}
-.socials{display:flex;gap:22px}
-.socials a:hover{color:var(--paper)}
-.modal{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px}
-.modal.open{display:flex}
-.modal img,.modal video{max-width:min(1100px,100%);max-height:86vh;border-radius:12px}
-.modal button{position:absolute;right:22px;top:18px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:#111;color:#fff;font-size:22px}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-@media(max-width:860px){
-.container{width:calc(100% - 40px)}
-.section{padding:80px 0}
-.nav-links{position:fixed;inset:74px 0 0;background:#0b0b0c;padding:34px 22px;display:none;flex-direction:column;align-items:stretch;font-size:20px;gap:22px}
-.nav-links.open{display:flex}
-.menu-btn{display:block}
-.hero{min-height:auto;padding:120px 0 64px}
-.hero-grid{grid-template-columns:1fr}
-.hero h1{font-size:clamp(64px,20vw,104px);margin:22px 0}
-.hero-lead{grid-template-columns:34px 1fr}
-.portrait-wrap{width:min(84vw,400px);justify-self:center;margin-top:62px}
-.portrait-tag{left:-8px}
-.scroll-note{display:none}
-.section-head{display:block}
-.section-head p{margin-top:20px}
-.service{grid-template-columns:44px 1fr;padding:24px 0}
-.service .arrow{display:none}
-.service:hover{padding-left:0}
-.project,.project:nth-child(even){grid-column:span 12;margin-top:0}
-.project-visual{height:320px}
-.process{grid-template-columns:1fr;gap:36px}
-.about-grid{grid-template-columns:1fr;gap:34px}
-.reel{height:420px}
-.glow{display:none}
-.foot{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:430px){
-.container{width:calc(100% - 32px)}
-.hero h1{font-size:20.5vw}
-.hero-actions .btn,.cta .btn{width:100%}
-.project-visual{height:270px}
-.glasses{width:84%;height:90px;gap:14px}
-.lens{border-width:8px}
-.lens:first-child::after{width:24px;height:7px;right:-27px}
-.project-meta{display:block}
-.kind{margin-top:12px}
-.stats{grid-template-columns:1fr}
-.facts{grid-template-columns:1fr}
-.term-body{padding:16px 14px;font-size:12px}
-.reel{height:360px}
-}
-.skip{position:fixed;top:0;left:0;z-index:100;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;background:var(--gold);color:#111;font-weight:700;border-radius:0 0 10px 0}
-.skip:focus{width:auto;height:auto;padding:12px 18px;overflow:visible;clip-path:none}
-.brand{padding:6px 0}
-.socials a{display:inline-flex;align-items:center;min-height:30px;padding:4px 2px}
-.print-head{display:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.hero h1 .row i{transform:none}.cur{display:none!important}.glow{display:none!important}}
-@media(hover:none){.cur{display:none!important}}
-@page{margin:13mm}
-@media print{
-nav,.grain,.glow,.progress,.cur,.hero-actions,.scroll-note,.marquee,.cta,.modal,.rail-hint,.skip,#motion,.type-line,.terminal,.portrait-wrap::before{display:none!important}
-.reveal{opacity:1!important;transform:none!important}
-.hero h1 .row i{transform:none!important;animation:none!important}
-body{background:#fff;color:#111;overflow:visible}
-.print-head{display:block!important;border-bottom:2px solid #111;padding-bottom:10px;margin-bottom:16px}
-.print-head h2{margin:0;font-size:30px;letter-spacing:-.02em}
-.print-head p{margin:4px 0 0;font-size:12px;color:#444}
-.hero{min-height:auto;padding:0 0 8px;display:block}
-.hero::before{display:none}
-.hero-grid{display:grid;grid-template-columns:1.5fr .5fr;gap:16px;align-items:start}
-.hero h1{font-size:40px;color:#111;margin:8px 0 12px}
-.hero h1 .hollow i{color:#777;-webkit-text-stroke:0}
-.hero-lead{margin:0}
-.portrait-wrap{width:150px;aspect-ratio:4/5;margin:0;justify-self:end}
-.portrait{border-radius:80px 80px 10px 10px;border-color:#bbb}
-.portrait-tag{position:static;background:none;border:0;padding:6px 0 0;min-width:0;backdrop-filter:none}
-.portrait-tag strong{font-size:11px;color:#111}
-.portrait-tag span{font-size:10px;color:#555}
-.live{display:none}
-.section{padding:16px 0;border-color:#ccc;break-inside:avoid}
-.section-head{display:block;margin-bottom:14px}
-.section-head h2{font-size:26px;margin:2px 0 6px;color:#111}
-.section-head p{color:#555;font-size:12px;max-width:none;margin:0}
-.num,.eyebrow{color:#7a6432}
-.service{padding:9px 0;border-color:#ddd;break-inside:avoid}
-.service h3{font-size:15px}
-.service p{font-size:11.5px}
-.arrow{display:none}
-.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.project{background:#fff;color:#111;border:1px solid #ccc;break-inside:avoid;grid-column:auto!important}
-.project-visual{height:150px}
-.project-visual.vanta,.project-visual.umbra,.project-visual.nova{display:none}
-.project h3{font-size:15px}
-.project p,.service p,.about-copy,.fact span{color:#444}
-.project-meta{padding:10px 12px 12px}
-.kind{color:#7a6432}
-.steps li{color:#444;border-color:#ddd;padding:10px 0 10px 46px}
-.steps li b{color:#111;font-size:15px}
-.steps li::before{color:#7a6432;top:11px}
-.about-grid{display:block}
-.about-quote{font-size:22px;color:#111;margin-bottom:10px}
-.about-copy{font-size:12px}
-.stats,.facts{border-color:#ccc}
-.stat,.fact{background:#fff;color:#111;border-color:#ccc;break-inside:avoid;padding:9px 12px}
-.stat b{font-size:20px;color:#111}
-.fact b{color:#7a6432}
-footer{color:#555;border-color:#ccc;padding:10px 0}
-.socials{gap:14px}
-a{color:#111;text-decoration:none}
-h1,h2,h3{color:#111}
-}
-</style>
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0c">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f1e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23c6a66b' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
-<!-- ============================================================
-     TWO WAYS TO EDIT THIS SITE
-     1. EASY  - open  yourdomain.com/admin  , log in, edit, press Publish.
-     2. MANUAL- edit the words below, save, re-upload this file.
-     Anything the /admin panel changes is stored in content.json and
-     wins over the text written here.
-     ============================================================ -->
-<a class="skip skip-link" href="#services">Skip to content</a>
-<header class="print-head">
-  <h2>Jawad Sheet</h2>
-  <p>Creative Developer &amp; Designer &middot; LIU university student &middot; Beirut, Lebanon</p>
-  <p data-contactline>jawadsheet27@gmail.com &middot; +961 81 191 013 &middot; wa.me/96181191013 &middot; linkedin.com/in/jawad-sheet-625016428</p>
-</header>
-<div class="grain"></div>
-<div class="glow" id="glow" aria-hidden="true"></div>
-<div class="progress" id="progress"></div>
+<body data-page="home">
+<a class="skip" href="#services">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <div class="cur cur-ring" id="curRing" aria-hidden="true"></div>
 <div class="cur cur-dot" id="curDot" aria-hidden="true"></div>
 
-<!-- ============================================================
-     TOP MENU  (the links at the very top of the page)
-     ============================================================ -->
+<!-- TOP MENU -->
 <nav id="nav">
   <div class="container nav-in">
-    <a class="brand" href="#top" data-e="brand">JAWAD SHEET</a>
+    <a class="brand" href="#top">
+      <img class="logo-d" data-img="logoDark" src="assets/logo-dark.jpg" alt="XARV logo" width="32" height="32">
+      <img class="logo-l" data-img="logoLight" src="assets/logo-light.jpg" alt="" width="32" height="32" aria-hidden="true">
+      <span>XARV</span>
+    </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">&#9776;</button>
     <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#motion">Motion</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-      <a class="btn" href="mailto:jawadsheet27@gmail.com?subject=Project%20inquiry">Let's talk</a>
+      <a href="#services" data-e="nav.services">Services</a>
+      <a href="#work" data-e="nav.work">Case studies</a>
+      <a href="#reviews" data-e="nav.reviews">Reviews</a>
+      <a href="#process" data-e="nav.process">Process</a>
+      <a href="#about" data-e="nav.about">About</a>
+      <a href="#faq" data-e="nav.faq">FAQ</a>
+    </div>
+    <div class="nav-acts">
+      <button class="lang-btn" id="langToggle" aria-label="Switch language">العربية</button>
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.2h13l-1.05 11.3a2 2 0 0 1-2 1.8h-6.9a2 2 0 0 1-2-1.8L5.5 8.2z"/><path d="M9 8.2V7a3 3 0 0 1 6 0v1.2"/></svg><span class="cart-count">0</span></button>
+      <a class="btn gold sm" data-wa="Hi XARV! I'd like to discuss a project." href="https://wa.me/96181191013" target="_blank" rel="noopener" data-e="nav.cta">Let's talk</a>
     </div>
   </div>
 </nav>
 
+<!-- HERO -->
 <header class="hero" id="top">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow" data-e="hero.eyebrow">Creative developer &middot; Designer &middot; LIU student</div>
+      <div class="eyebrow" data-e="hero.eyebrow">Creative studio · Beirut, Lebanon</div>
       <h1>
         <span class="row"><i style="animation-delay:.05s" data-e="hero.word1">BUILD.</i></span>
         <span class="row hollow"><i style="animation-delay:.17s" data-e="hero.word2">DESIGN.</i></span>
         <span class="row"><i style="animation-delay:.29s" data-e="hero.word3">GROW.</i></span>
       </h1>
-      <div class="type-line" id="typeLine" aria-live="polite"></div>
       <div class="hero-lead">
         <span class="line"></span>
-        <p data-e="hero.lead">I build sharp digital experiences and visual identities for people and brands ready to be noticed &mdash; websites, apps, logos, menus, and advertising that actually moves.</p>
+        <p data-e="hero.lead">XARV builds sharp digital experiences for local businesses ready to be noticed — websites, branding, advertising and booking systems that turn attention into real clients.</p>
       </div>
       <div class="hero-actions">
-        <a class="btn gold magnet" href="#work">Explore selected work &#8600;</a>
-        <a class="btn magnet" href="https://wa.me/96181191013?text=Hi%20Jawad%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Message on WhatsApp</a>
+        <a class="btn gold magnet" href="#services" data-e="hero.ctaWork">Explore services ↘</a>
+        <a class="btn magnet" data-wa="Hi XARV! I'd like to discuss a project." href="https://wa.me/96181191013" target="_blank" rel="noopener" data-e="hero.ctaWa">Message on WhatsApp</a>
+      </div>
+      <div class="hero-meta">
+        <span class="promise"><span class="live"></span><span data-e="hero.promise">Replies within 24h</span></span>
       </div>
     </div>
-    <div class="portrait-wrap" id="portrait">
-      <img class="portrait" data-img="profile" src="assets/profile.jpg" alt="Portrait of Jawad Sheet in a black suit">
-      <div class="portrait-tag"><strong><span class="live"></span><span data-e="hero.badge">Available for projects</span></strong><span data-e="hero.badgeSub">Beirut &middot; Remote worldwide</span></div>
+    <div class="portrait-wrap">
+      <img class="portrait" data-img="portrait" src="assets/portrait.jpg" alt="Portrait of Jawad Sheet, founder of XARV, in a black suit">
+      <div class="portrait-tag">
+        <strong><span class="live"></span><span data-e="hero.badge">Available for projects</span></strong>
+        <span class="sub" data-e="hero.badgeSub">Beirut · All of Lebanon</span>
+      </div>
     </div>
   </div>
-  <div class="scroll-note">Scroll to discover</div>
+  <div class="scroll-note" data-e="hero.scrollNote">Scroll to discover</div>
 </header>
 
-<div class="marquee">
-  <div class="mq-track" id="mqTrack" data-list="marquee">
-    <span>Websites</span><span>Mobile apps</span><span>Brand identity</span><span>Logos</span><span>Menu design</span><span>Advertising flow</span><span>Motion &amp; interaction</span><span>Beirut, Lebanon</span>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track" data-list="marquee">
+    <span>Websites</span><span>Mobile apps</span><span>Logos</span><span>Menus</span><span>Advertising</span><span>Appointments</span><span>Growth</span><span>Beirut, Lebanon</span>
+    <span>Websites</span><span>Mobile apps</span><span>Logos</span><span>Menus</span><span>Advertising</span><span>Appointments</span><span>Growth</span><span>Beirut, Lebanon</span>
   </div>
 </div>
 
 <main>
-<!-- ============================================================
-     01  SERVICES  -  what you offer
-     To add a service: copy one whole <div class="service"> ... </div>
-     block and change the words inside.
-     ============================================================ -->
+
+<!-- 01 SERVICES -->
 <section class="section" id="services">
   <div class="container">
     <div class="section-head reveal">
-      <div><span class="num">01 / SERVICES</span><h2 data-e="services.title">From first idea to polished launch.</h2></div>
-      <p data-e="services.intro">Creative and technical work shaped around one goal: look professional, communicate clearly, and earn attention.</p>
+      <div><span class="num"><span data-e="services.num">01</span> / <span data-e="services.label">SERVICES</span></span><h2 data-e="services.title">Pick what your business needs.</h2></div>
+      <p data-e="services.intro">Order like a menu — add items to your cart and check out on WhatsApp, or message us directly about any service.</p>
     </div>
-    <div class="services" data-list="services">
-      <article class="service reveal"><span class="num">S1</span><div><h3>Web experiences</h3><p>Responsive websites, landing pages and portfolios with strong visual direction and clear user journeys.</p></div><span class="arrow">&#8594;</span></article>
-      <article class="service reveal"><span class="num">S2</span><div><h3>App concepts</h3><p>Interface design and prototypes built around intuitive flows and a consistent visual system.</p></div><span class="arrow">&#8594;</span></article>
-      <article class="service reveal"><span class="num">S3</span><div><h3>Logos &amp; menus</h3><p>Identities, logos, menus and branded materials that make a business instantly recognizable.</p></div><span class="arrow">&#8594;</span></article>
-      <article class="service reveal"><span class="num">S4</span><div><h3>Advertising &amp; growth</h3><p>Campaign direction, content flow and promo material built to turn attention into real clients.</p></div><span class="arrow">&#8594;</span></article>
+    <div class="items-grid" data-list="services">
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S1</span></div><h3>Web experiences</h3><p class="desc">Fast, responsive websites and landing pages that turn visitors into customers.</p><div class="item-actions"><button class="btn gold sm" data-add="s1">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S2</span></div><h3>App concepts</h3><p class="desc">Clean app interfaces and prototypes built around intuitive flows.</p><div class="item-actions"><button class="btn gold sm" data-add="s2">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S3</span></div><h3>Logos</h3><p class="desc">Distinctive marks that make your business instantly recognizable.</p><div class="item-actions"><button class="btn gold sm" data-add="s3">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S4</span></div><h3>Menus</h3><p class="desc">Restaurant and salon menus designed to sell, not just to list.</p><div class="item-actions"><button class="btn gold sm" data-add="s4">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S5</span></div><h3>Advertising</h3><p class="desc">Campaign visuals and promo content that bring people through your door.</p><div class="item-actions"><button class="btn gold sm" data-add="s5">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S6</span></div><h3>Appointments</h3><p class="desc">WhatsApp and online booking setups, so clients schedule in seconds.</p><div class="item-actions"><button class="btn gold sm" data-add="s6">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S7</span></div><h3>Growth</h3><p class="desc">Content flow and strategy that keeps attention coming back.</p><div class="item-actions"><button class="btn gold sm" data-add="s7">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
+      <article class="item reveal"><div class="item-body"><div class="item-top"><span class="snum">S8</span></div><h3>Tech help</h3><p class="desc">Any digital or tech problem — one message and it's handled.</p><div class="item-actions"><button class="btn gold sm" data-add="s8">Add to cart</button><a class="btn sm" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp now</a></div></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     02  SELECTED WORK  -  your projects
-     To add a project: copy one whole <article class="project"> ... </article>
-     block and change the title, the text and the picture.
-     To remove a project: delete one whole <article> ... </article> block.
-     ============================================================ -->
+<!-- 02 CASE STUDIES -->
 <section class="section" id="work">
   <div class="container">
     <div class="section-head reveal">
-      <div><span class="num">02 / SELECTED WORK</span><h2 data-e="work.title">Concepts with character.</h2></div>
-      <p data-e="work.intro">Web directions and identity work across sports, eyewear, beauty, branding, hospitality and fragrance.</p>
+      <div><span class="num"><span data-e="cases.num">02</span> / <span data-e="cases.label">CASE STUDIES</span></span><h2 data-e="cases.title">Problems in. Results out.</h2></div>
+      <p data-e="cases.intro">Short stories of what happens when a local business gets the digital presence it deserves.</p>
     </div>
-    <div class="work-grid" data-list="projects">
-      <article class="project reveal tilt"><div class="project-visual vanta"><div class="word">VANTA</div><div class="track"></div></div><div class="project-meta"><div><h3>VANTA Run</h3><p>Immersive sports-performance web concept with motion-led storytelling.</p></div><span class="kind">Web concept</span></div></article>
-      <article class="project reveal tilt"><div class="project-visual umbra"><div class="glasses"><span class="lens"></span><span class="lens"></span></div><div class="mark">UMBRA</div></div><div class="project-meta"><div><h3>UMBRA Eyewear</h3><p>Dark luxury sunglasses experience with product-focused interaction.</p></div><span class="kind">E-commerce concept</span></div></article>
-      <article class="project reveal tilt"><div class="project-visual shot"><img class="zoom" src="assets/velours.jpg" alt="Luxury lipstick product photograph in gold case on a dark reflective surface"><div class="veil"></div><div class="mark">Velours</div></div><div class="project-meta"><div><h3>VELOURS Beauty</h3><p>Editorial lip-brand concept built around real product photography and premium shade storytelling.</p></div><span class="kind">Beauty concept</span></div></article>
-      <article class="project reveal tilt"><div class="project-visual nova"><div class="orb"></div><div class="mark">NOVA</div></div><div class="project-meta"><div><h3>NOVA Branding</h3><p>High-energy agency direction with bold typography and dimensional visuals.</p></div><span class="kind">Branding concept</span></div></article>
-      <article class="project reveal tilt"><div class="project-visual light" style="background:#fff"><img class="zoom" src="assets/squirrels.jpg" alt="Squirrels Park logo design with squirrel, acorn and flame shape"></div><div class="project-meta"><div><h3>Squirrels Park</h3><p>Playful mascot logo built on a flame silhouette, an acorn and custom lettering for a family park brand.</p></div><span class="kind">Logo design</span></div></article>
-      <article class="project reveal tilt"><div class="project-visual light" style="background:#efe8dc"><img class="zoom" src="assets/orris.jpg" alt="ORRIS Parfums logo system presentation with gold monogram and light and dark versions"></div><div class="project-meta"><div><h3>ORRIS Parfums</h3><p>Full gold-foil identity system: main logo, monogram icon, light and dark versions, and social profile mark.</p></div><span class="kind">Brand identity</span></div></article>
+    <div class="cases-grid" data-list="cases">
+      <article class="case reveal">
+        <div class="case-top"><span class="case-tag">Beauty · Beirut</span><h3>Salon booking rescue</h3>
+          <div class="case-stats"><div class="chip"><span class="v">+38%</span><span class="l">more bookings</span></div><div class="chip"><span class="v">5</span><span class="l">days to launch</span></div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-row"><div class="lbl">Problem</div><p>A busy salon was losing clients — Instagram DMs sat unanswered for hours and bookings lived in a paper notebook.</p></div>
+          <div class="case-row"><div class="lbl">Solution</div><p>We refreshed the Instagram look, set up WhatsApp auto-replies, and built a booking flow clients finish in seconds.</p></div>
+          <div class="case-row"><div class="lbl">Result</div><p>Clients started messaging the same week — the owner now confirms bookings instead of chasing them.</p></div>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div class="case-top"><span class="case-tag">Hospitality · Jounieh</span><h3>Café menu, rebuilt to sell</h3>
+          <div class="case-stats"><div class="chip"><span class="v">2×</span><span class="l">avg. order size</span></div><div class="chip"><span class="v">3</span><span class="l">days to launch</span></div></div>
+        </div>
+        <div class="case-body">
+          <div class="case-row"><div class="lbl">Problem</div><p>A café's outdated PDF menu was costing it orders — blurry photos, no structure, nothing tempting.</p></div>
+          <div class="case-row"><div class="lbl">Solution</div><p>A new visual menu designed around best-sellers, plus a clean ordering page linked from Instagram and Google.</p></div>
+          <div class="case-row"><div class="lbl">Result</div><p>Customers order faster, order more, and the menu finally looks like the coffee tastes.</p></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     03  MOTION  -  the sideways video row
-     Each video is one <div class="reel"> ... </div> block.
-     A new video must be put in the assets folder and named in src="..."
-     ============================================================ -->
-<section class="section" id="motion">
+<!-- 03 REVIEWS -->
+<section class="section" id="reviews">
   <div class="container">
     <div class="section-head reveal">
-      <div><span class="num">03 / MOTION</span><h2 data-e="motion.title">Work that moves.</h2></div>
-      <p data-e="motion.intro">Short walkthroughs of live interfaces in context. Videos play as you scroll &mdash; tap the speaker for sound, tap a card to open it full size.</p>
+      <div><span class="num"><span data-e="reviews.num">03</span> / <span data-e="reviews.label">REVIEWS</span></span><h2 data-e="reviews.title">What clients say.</h2></div>
+      <p data-e="reviews.intro">Real words from real projects.</p>
     </div>
-    <div class="rail-wrap reveal">
-      <div class="rail" id="rail" data-list="reels">
-        <div class="reel" style="aspect-ratio:9/16"><video src="assets/reel-1.mp4" poster="assets/poster-1.jpg" title="Brief to build — turning a client request into a finished site" muted loop playsinline preload="metadata"></video><button class="sound" aria-label="Toggle sound">&#128263;</button><div class="cap"><b>Brief to build</b><span>Turning a simple client request into a finished site</span></div></div>
-        <div class="reel" style="aspect-ratio:25/22"><video src="assets/reel-2.mp4" poster="assets/poster-2.jpg" title="Caf&eacute; menu and ordering interface for a coffee brand" muted loop playsinline preload="metadata"></video><button class="sound" aria-label="Toggle sound">&#128263;</button><div class="cap"><b>Caf&eacute; menu &amp; ordering UI</b><span>Clean product layout for a coffee brand</span></div></div>
-        <div class="reel" style="aspect-ratio:29/52"><video src="assets/reel-3.mp4" poster="assets/poster-3.jpg" title="Branding site in motion with animated hero and 3D visuals" muted loop playsinline preload="metadata"></video><button class="sound" aria-label="Toggle sound">&#128263;</button><div class="cap"><b>Branding site in motion</b><span>Animated hero and 3D visuals on desktop</span></div></div>
-        <div class="reel" style="aspect-ratio:29/52"><video src="assets/reel-4.mp4" poster="assets/poster-4.jpg" title="Beauty brand experience with editorial typography and product motion" muted loop playsinline preload="metadata"></video><button class="sound" aria-label="Toggle sound">&#128263;</button><div class="cap"><b>Beauty brand experience</b><span>Editorial typography and product motion</span></div></div>
-      </div>
-      <div class="rail-hint">Drag or scroll sideways &#8594;</div>
+    <div class="reviews-grid" data-list="reviews">
+      <div class="review reveal"><div class="stars" aria-label="5 out of 5">★★★★★</div><span class="mark" aria-hidden="true">“</span><p>Jawad redesigned our salon's online look and set up WhatsApp booking — clients started messaging the same week.</p><div class="who"><b>Salon owner</b> · Beirut</div></div>
+      <div class="review reveal"><div class="stars" aria-label="5 out of 5">★★★★★</div><span class="mark" aria-hidden="true">“</span><p>The new menu design changed how people order. Clean, fast, and exactly our style.</p><div class="who"><b>Café manager</b> · Jounieh</div></div>
+      <div class="review reveal"><div class="stars" aria-label="5 out of 5">★★★★★</div><span class="mark" aria-hidden="true">“</span><p>Fast replies, simple explanations, and delivery exactly when promised.</p><div class="who"><b>Shop owner</b> · Hamra</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     04  PROCESS  -  how you work, step by step
-     ============================================================ -->
+<!-- 04 PROCESS -->
 <section class="section" id="process">
   <div class="container">
     <div class="section-head reveal">
-      <div><span class="num">04 / PROCESS</span><h2 data-e="process.title">How a project runs.</h2></div>
+      <div><span class="num"><span data-e="process.num">04</span> / <span data-e="process.label">PROCESS</span></span><h2 data-e="process.title">How a project runs.</h2></div>
       <p data-e="process.intro">Clear steps, fast feedback, and no guessing. You always know what stage we are at.</p>
     </div>
-    <div class="process">
-      <div class="reveal">
-        <ol class="steps" data-list="steps">
-          <li><b>Brief</b>We talk about the goal, the audience and what success looks like.</li>
-          <li><b>Direction</b>I set the visual language: type, color, layout and tone.</li>
-          <li><b>Build</b>Design becomes a real, responsive, fast product.</li>
-          <li><b>Launch &amp; grow</b>We publish, then improve with content and promotion.</li>
-        </ol>
-      </div>
-      <div class="terminal reveal" id="terminal">
-        <div class="term-bar"><i class="tdot r"></i><i class="tdot y"></i><i class="tdot g"></i><span>jawad &mdash; project run</span></div>
-        <div class="term-body" id="termBody"><div class="tline in"><span class="p">$</span><span class="t">jawad new-project --client "coffee shop" --goal "more orders"</span></div></div>
+    <div class="process-grid">
+      <ol class="steps reveal" data-list="steps">
+        <li><b>Brief</b>We talk about the goal, the audience and what success looks like.</li>
+        <li><b>Direction</b>We set the visual language: type, color, layout and tone.</li>
+        <li><b>Build</b>Design becomes a real, responsive, fast product.</li>
+        <li><b>Launch &amp; grow</b>We publish, then improve with content and promotion.</li>
+      </ol>
+      <div class="terminal reveal">
+        <div class="term-bar"><span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span><span data-e="process.terminal.title">xarv — project run</span></div>
+        <div class="term-body" data-list="termLines">
+          <div class="tline in"><span class="p">›</span><span>$ xarv new-project --client "your business"</span></div>
+          <div class="tline in"><span class="p">›</span><span>✓ brief received · goal: more clients</span></div>
+          <div class="tline in"><span class="p">›</span><span>✓ direction locked · type + color + tone</span></div>
+          <div class="tline in"><span class="p">›</span><span>✓ build shipped → launch &amp; grow</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     05  ABOUT  -  your bio, your numbers and your facts
-     ============================================================ -->
+<!-- 05 ABOUT -->
 <section class="section" id="about">
-  <div class="container about-grid">
-    <div class="reveal"><span class="num">05 / ABOUT</span><p class="about-quote" data-e="about.quote">Creative thinking, built with a practical mindset.</p></div>
-    <div class="reveal">
-      <p class="about-copy" data-e="about.copy">I'm Jawad Sheet, a university student at LIU based in Beirut, Lebanon. I work across development and design, combining technology with visual direction. My goal is simple: create work that looks memorable, feels useful, and helps the people behind it move forward.</p>
-      <div class="stats" data-list="stats">
-        <div class="stat"><b data-count="6">6</b><span>Concept projects</span></div>
-        <div class="stat"><b data-count="4">4</b><span>Service areas</span></div>
-        <div class="stat"><b data-count="24" data-suffix="h">24h</b><span>Reply time</span></div>
-      </div>
-      <div class="facts" data-list="facts">
-        <div class="fact"><b>Based in</b><span>Beirut, Lebanon</span></div>
-        <div class="fact"><b>Current chapter</b><span>LIU university student</span></div>
-        <div class="fact"><b>Focus</b><span>Web, apps, identity &amp; promotion</span></div>
-        <div class="fact"><b>Working style</b><span>Creative, direct &amp; collaborative</span></div>
+  <div class="container">
+    <span class="num"><span data-e="about.num">05</span> / <span data-e="about.label">ABOUT</span></span>
+    <div class="about-grid">
+      <h2 class="about-quote reveal" data-e="about.quote">Big-brand presence, without the big agency.</h2>
+      <div class="reveal">
+        <p class="about-title" data-e="about.title">Jawad Sheet — founder of XARV</p>
+        <p class="about-copy" data-e="about.copy">I'm Jawad Sheet, a creative developer and designer based in Beirut. I started XARV with one goal: give local businesses in Lebanon the kind of digital presence big brands enjoy — without big-agency prices or complications.</p>
+        <p class="about-copy" data-e="about.copy2">Every project is personal — you talk directly with me from the first message to the final launch.</p>
+        <div class="stats" data-list="stats">
+          <div class="stat"><b>8</b><span>Services under one roof</span></div>
+          <div class="stat"><b>24h</b><span>Reply time</span></div>
+          <div class="stat"><b>1</b><span>Person, directly with you</span></div>
+        </div>
+        <div class="facts" data-list="facts">
+          <div class="fact"><b>Based in</b><span>Beirut, Lebanon</span></div>
+          <div class="fact"><b>Founded by</b><span>Jawad Sheet</span></div>
+          <div class="fact"><b>Focus</b><span>Web, identity, ads &amp; bookings</span></div>
+          <div class="fact"><b>Working style</b><span>Creative, direct &amp; collaborative</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     CONTACT  -  the big "let's talk" block at the bottom
-     ============================================================ -->
+<!-- 06 FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="num"><span data-e="faq.num">06</span> / <span data-e="faq.label">FAQ</span></span><h2 data-e="faq.title">Answers, before you even ask.</h2></div>
+      <p data-e="faq.intro">Everything else is one WhatsApp message away.</p>
+    </div>
+    <div class="faq-list reveal" data-list="faqs">
+      <details><summary><span>How much does a project cost?</span><span class="plus">+</span></summary><div class="faq-a">Every business is different, so we don't list fixed prices. Add services to your cart or message us your goal on WhatsApp, and you'll receive a clear quote within 24 hours — no hidden fees.</div></details>
+      <details><summary><span>How long does it take?</span><span class="plus">+</span></summary><div class="faq-a">A landing page takes about a week, a full website two to three weeks, and logos or menus a few days. You always know the timeline before we start.</div></details>
+      <details><summary><span>How do payments work?</span><span class="plus">+</span></summary><div class="faq-a">Simple and flexible: 50% to start and 50% at delivery. We accept cash (USD), Whish, OMT, and USDT.</div></details>
+      <details><summary><span>Do you work in Arabic and English?</span><span class="plus">+</span></summary><div class="faq-a">Yes — websites, menus, content, and ads in Arabic, English, or both.</div></details>
+      <details><summary><span>Do you only work with businesses in Lebanon?</span><span class="plus">+</span></summary><div class="faq-a">XARV is based in Beirut and focused on local businesses, but we work remotely with anyone, anywhere.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
 <section class="cta" id="contact">
   <div class="container">
-    <span class="eyebrow" data-e="cta.eyebrow">Have a project in mind?</span>
+    <div class="eyebrow" data-e="cta.eyebrow">Have a project in mind?</div>
     <h2 data-e="cta.title">Let's make it <em>impossible</em> to ignore.</h2>
-    <p data-e="cta.text">Tell me what you're building and where you want to go. I'll turn it into a focused digital or visual experience.</p>
+    <p data-e="cta.text">Tell us what you're building — we'll reply within 24 hours with a clear plan and quote.</p>
     <div class="actions">
-      <a class="btn gold magnet" href="mailto:jawadsheet27@gmail.com?subject=Let%27s%20build%20something">Start by email</a>
-      <a class="btn magnet" href="https://wa.me/96181191013?text=Hi%20Jawad%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
-      <button class="btn magnet" onclick="window.print()">Save as PDF</button>
+      <a class="btn gold magnet" data-wa="Hi XARV! I'd like to discuss a project." href="https://wa.me/96181191013" target="_blank" rel="noopener" data-e="cta.b1">Start on WhatsApp</a>
+      <a class="btn magnet" href="#services" data-e="cta.b2">Browse services</a>
     </div>
   </div>
 </section>
+
 </main>
 
-<!-- ============================================================
-     FOOTER  -  copyright line and the Email / Call / WhatsApp / LinkedIn links
-     ============================================================ -->
+<!-- FOOTER -->
 <footer>
-  <div class="container foot">
-    <div>&copy; <span id="year"></span> Jawad Sheet &middot; <span data-e="contact.location">Beirut, Lebanon</span></div>
-    <div class="socials">
-      <a href="mailto:jawadsheet27@gmail.com">Email</a>
-      <a href="tel:+96181191013">Call</a>
-      <a href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://www.linkedin.com/in/jawad-sheet-625016428/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+  <div class="container">
+    <div class="foot">
+      <div class="foot-brand">
+        <span class="wm">XARV</span>
+        <p data-e="footer.tag">Build. Design. Grow.</p>
+      </div>
+      <div class="foot-col">
+        <div class="h" data-e="footer.exploreHead">Explore</div>
+        <a href="#services" data-e="nav.services">Services</a>
+        <a href="#work" data-e="nav.work">Case studies</a>
+        <a href="#reviews" data-e="nav.reviews">Reviews</a>
+        <a href="#faq" data-e="nav.faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <div class="h" data-e="footer.contactHead">Contact</div>
+        <a data-wa="" href="https://wa.me/96181191013" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:jawadsheet27@gmail.com">Email</a>
+        <a data-ig href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-line">
+      <span data-e="footer.copy">© 2026 XARV — Beirut, Lebanon</span>
+      <span>
+        <a href="privacy.html" data-e="footer.privacyLink">Privacy Policy</a>
+        <a href="admin/" data-e="footer.adminLink">Admin</a>
+        <span data-e="footer.founderLabel" style="margin-inline-start:16px">Founded by Jawad Sheet</span>
+      </span>
     </div>
   </div>
 </footer>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Media preview">
-  <button id="modalClose" aria-label="Close preview">&times;</button>
-  <div id="modalBody"></div>
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <button class="cart-btn" id="cartOpen2" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.2h13l-1.05 11.3a2 2 0 0 1-2 1.8h-6.9a2 2 0 0 1-2-1.8L5.5 8.2z"/><path d="M9 8.2V7a3 3 0 0 1 6 0v1.2"/></svg><span class="cart-count">0</span></button>
+  <a class="btn gold" data-wa="Hi XARV! I'd like to discuss a project." href="https://wa.me/96181191013" target="_blank" rel="noopener" data-e="sticky.cta">Start on WhatsApp</a>
 </div>
-<script>
-/* ============================================================
-   LIVE CONTENT LOADER
-   Reads content.json (the file your /admin panel writes) and
-   updates the page BEFORE the animations start.
-   If content.json is missing or broken, the page simply keeps
-   the text written in this file. Nothing can break.
-   ============================================================ */
-window.__contentReady = (function(){
-  function esc(s){
-    return String(s == null ? '' : s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-  /* *word* becomes italic gold emphasis, like the original headline */
-  function em(s){ return esc(s).replace(/\*([^*]+)\*/g,'<em>$1</em>'); }
-  function txt(key, val){
-    if(val == null || val === '') return;
-    document.querySelectorAll('[data-e="' + key + '"]').forEach(function(el){ el.innerHTML = em(val); });
-  }
-  function host(name){ return document.querySelector('[data-list="' + name + '"]'); }
-  function render(name, items, fn){
-    var h = host(name);
-    if(!h || !items || !items.length) return;
-    h.innerHTML = items.map(fn).join('');
-  }
-  function visualHtml(p){
-    var v = p.visual || 'light';
-    var mark = esc(p.mark || '');
-    if(v === 'vanta') return '<div class="project-visual vanta"><div class="word">' + mark + '</div><div class="track"></div></div>';
-    if(v === 'umbra') return '<div class="project-visual umbra"><div class="glasses"><span class="lens"></span><span class="lens"></span></div><div class="mark">' + mark + '</div></div>';
-    if(v === 'nova')  return '<div class="project-visual nova"><div class="orb"></div><div class="mark">' + mark + '</div></div>';
-    if(v === 'shot')  return '<div class="project-visual shot"><img class="zoom" src="' + esc(p.image) + '" alt="' + esc(p.alt || p.title) + '"><div class="veil"></div><div class="mark">' + mark + '</div></div>';
-    return '<div class="project-visual light" style="background:' + esc(p.bg || '#f5f2ec') + '"><img class="zoom" src="' + esc(p.image) + '" alt="' + esc(p.alt || p.title) + '"></div>';
-  }
-  function apply(c){
-    if(!c || typeof c !== 'object') return;
 
-    txt('brand', c.brand);
-    if(c.profileImage){
-      document.querySelectorAll('[data-img="profile"]').forEach(function(el){ el.setAttribute('src', c.profileImage); });
-    }
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Cart">
+  <div class="cart-head">
+    <h3 data-e="cart.title">Your cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <button class="btn gold btn-block" id="cartCheckout" style="width:100%" data-e="cart.checkout">Checkout on WhatsApp</button>
+    <p class="cart-note" id="cartNote">We confirm details &amp; payment on WhatsApp — replies within 24h.</p>
+  </div>
+</aside>
 
-    var h = c.hero || {};
-    ['eyebrow','word1','word2','word3','lead','badge','badgeSub'].forEach(function(k){ txt('hero.' + k, h[k]); });
-
-    render('marquee', c.marquee, function(s){ return '<span>' + esc(s) + '</span>'; });
-
-    var sv = c.services || {};
-    txt('services.title', sv.title);
-    txt('services.intro', sv.intro);
-    render('services', sv.items, function(s, i){
-      return '<article class="service reveal"><span class="num">S' + (i + 1) + '</span><div><h3>' + em(s.title) + '</h3><p>' + em(s.desc) + '</p></div><span class="arrow">&#8594;</span></article>';
-    });
-
-    var wk = c.work || {};
-    txt('work.title', wk.title);
-    txt('work.intro', wk.intro);
-    render('projects', c.projects, function(p){
-      return '<article class="project reveal tilt">' + visualHtml(p) +
-        '<div class="project-meta"><div><h3>' + em(p.title) + '</h3><p>' + em(p.desc) +
-        '</p></div><span class="kind">' + esc(p.kind) + '</span></div></article>';
-    });
-
-    var mo = c.motion || {};
-    txt('motion.title', mo.title);
-    txt('motion.intro', mo.intro);
-    render('reels', c.reels, function(r){
-      return '<div class="reel" style="aspect-ratio:' + esc(r.ratio || '9/16') + '">' +
-        '<video src="' + esc(r.src) + '" poster="' + esc(r.poster || '') + '" title="' + esc(r.title || r.cap || '') +
-        '" muted loop playsinline preload="metadata"></video>' +
-        '<button class="sound" aria-label="Toggle sound">&#128263;</button>' +
-        '<div class="cap"><b>' + em(r.cap || '') + '</b><span>' + em(r.sub || '') + '</span></div></div>';
-    });
-
-    var pr = c.process || {};
-    txt('process.title', pr.title);
-    txt('process.intro', pr.intro);
-    render('steps', pr.steps, function(s){ return '<li><b>' + em(s.title) + '</b>' + em(s.desc) + '</li>'; });
-
-    var ab = c.about || {};
-    txt('about.quote', ab.quote);
-    txt('about.copy', ab.copy);
-    render('stats', ab.stats, function(s){
-      var num = parseInt(s.value, 10);
-      var dc = isNaN(num) ? '' : ' data-count="' + num + '"';
-      var ds = s.suffix ? ' data-suffix="' + esc(s.suffix) + '"' : '';
-      return '<div class="stat"><b' + dc + ds + '>' + esc(s.value) + esc(s.suffix || '') + '</b><span>' + esc(s.label) + '</span></div>';
-    });
-    render('facts', ab.facts, function(f){
-      return '<div class="fact"><b>' + em(f.label) + '</b><span>' + em(f.value) + '</span></div>';
-    });
-
-    var ct2 = c.cta || {};
-    txt('cta.eyebrow', ct2.eyebrow);
-    txt('cta.title', ct2.title);
-    txt('cta.text', ct2.text);
-
-    /* contact details: rewrite every link on the page */
-    var ct = c.contact || {};
-    if(ct.email){
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
-        var q = a.getAttribute('href').split('?')[1];
-        a.setAttribute('href', 'mailto:' + ct.email + (q ? '?' + q : ''));
-      });
-    }
-    if(ct.phoneDigits){
-      var digits = String(ct.phoneDigits).replace(/[^0-9]/g,'');
-      document.querySelectorAll('a[href^="tel:"]').forEach(function(a){ a.setAttribute('href', 'tel:+' + digits); });
-      document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
-        var q = a.getAttribute('href').split('?')[1];
-        a.setAttribute('href', 'https://wa.me/' + digits + (q ? '?' + q : ''));
-      });
-    }
-    if(ct.linkedin){
-      document.querySelectorAll('a[href*="linkedin.com"]').forEach(function(a){ a.setAttribute('href', ct.linkedin); });
-    }
-    txt('contact.location', ct.location);
-
-    /* the contact line that only shows when the CV is printed */
-    var pc = document.querySelector('[data-contactline]');
-    if(pc && ct.email){
-      pc.textContent = ct.email + ' \u00b7 ' + (ct.phoneDisplay || '') +
-        ' \u00b7 wa.me/' + String(ct.phoneDigits || '').replace(/[^0-9]/g,'') +
-        ' \u00b7 ' + String(ct.linkedin || '').replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'');
-    }
-  }
-
-  return new Promise(function(done){
-    var finish = function(){ try{ done(); }catch(e){} };
-    try{
-      fetch('content.json', {cache:'no-store'})
-        .then(function(r){ return r.ok ? r.json() : null; })
-        .then(function(j){ try{ apply(j); }catch(e){} finish(); })
-        .catch(finish);
-    }catch(e){ finish(); }
-  });
-})();
-</script>
-<script>
-function __initSite(){
-var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var nav = document.getElementById('nav');
-var progress = document.getElementById('progress');
-
-/* nav state + scroll progress */
-function onScroll(){
-  nav.classList.toggle('scrolled', window.scrollY > 24);
-  var h = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
-}
-window.addEventListener('scroll', onScroll, {passive:true});
-onScroll();
-
-/* mobile menu */
-var menuBtn = document.getElementById('menuBtn');
-var navLinks = document.getElementById('navLinks');
-function closeMenu(){
-  navLinks.classList.remove('open');
-  menuBtn.setAttribute('aria-expanded','false');
-  menuBtn.innerHTML = '&#9776;';
-  document.body.classList.remove('lock');
-}
-menuBtn.addEventListener('click', function(){
-  var open = navLinks.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', open);
-  menuBtn.innerHTML = open ? '&times;' : '&#9776;';
-  document.body.classList.toggle('lock', open);
-});
-navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
-
-/* reveal on scroll */
-var io = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-  });
-}, {threshold:.14, rootMargin:'0px 0px -40px'});
-document.querySelectorAll('.reveal').forEach(function(el, i){
-  el.style.transitionDelay = (Math.min(i,6) * 60) + 'ms';
-  io.observe(el);
-});
-
-/* active nav link */
-var sections = ['services','work','motion','process','about'];
-var navMap = {};
-navLinks.querySelectorAll('a[href^="#"]').forEach(function(a){ navMap[a.getAttribute('href').slice(1)] = a; });
-var navIo = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    var a = navMap[e.target.id];
-    if(a && e.isIntersecting){
-      Object.keys(navMap).forEach(function(k){ navMap[k].classList.remove('active'); });
-      a.classList.add('active');
-    }
-  });
-}, {threshold:.3});
-sections.forEach(function(id){ var s = document.getElementById(id); if(s) navIo.observe(s); });
-
-/* custom cursor */
-var dot = document.getElementById('curDot');
-var ring = document.getElementById('curRing');
-var mx = innerWidth/2, my = innerHeight/2, rx = mx, ry = my;
-var glow = document.getElementById('glow');
-var portrait = document.getElementById('portrait');
-var hasFine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-if(hasFine && !reduce){
-  window.addEventListener('pointermove', function(e){
-    mx = e.clientX; my = e.clientY;
-    dot.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)';
-    if(portrait){
-      var px = (mx / innerWidth - .5), py = (my / innerHeight - .5);
-      portrait.style.transform = 'translate3d(' + (px * -16) + 'px,' + (py * -14) + 'px,0) rotateY(' + (px * 4) + 'deg)';
-    }
-  }, {passive:true});
-  (function loop(){
-    rx += (mx - rx) * .14; ry += (my - ry) * .14;
-    ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
-    if(glow) glow.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0) translate(-50%,-50%)';
-    requestAnimationFrame(loop);
-  })();
-  document.querySelectorAll('a,button,.project,.reel,.service').forEach(function(el){
-    el.addEventListener('mouseenter', function(){ ring.classList.add('big'); });
-    el.addEventListener('mouseleave', function(){ ring.classList.remove('big'); });
-  });
-} else {
-  dot.style.display = ring.style.display = 'none';
-}
-
-/* hero typing line */
-var typeLine = document.getElementById('typeLine');
-var phrases = ['> building websites that sell', '> designing logos & menus', '> shipping app interfaces', '> making brands impossible to ignore'];
-if(typeLine){
-  if(reduce){
-    typeLine.textContent = phrases[0];
-  } else {
-    var pi = 0, ci = 0, deleting = false;
-    (function type(){
-      var full = phrases[pi];
-      ci += deleting ? -1 : 1;
-      typeLine.innerHTML = full.slice(0, ci).replace(/&/g,'&amp;').replace(/</g,'&lt;') + '<span class="caret"></span>';
-      var delay = deleting ? 32 : 55;
-      if(!deleting && ci === full.length){ deleting = true; delay = 1700; }
-      else if(deleting && ci === 0){ deleting = false; pi = (pi + 1) % phrases.length; delay = 320; }
-      setTimeout(type, delay);
-    })();
-  }
-}
-
-/* magnetic buttons */
-if(hasFine && !reduce){
-  document.querySelectorAll('.magnet').forEach(function(el){
-    el.addEventListener('pointermove', function(e){
-      var r = el.getBoundingClientRect();
-      var x = (e.clientX - r.left - r.width/2) * .18;
-      var y = (e.clientY - r.top - r.height/2) * .3;
-      el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-    });
-    el.addEventListener('pointerleave', function(){ el.style.transform = ''; });
-  });
-  /* card tilt */
-  document.querySelectorAll('.tilt').forEach(function(card){
-    card.addEventListener('pointermove', function(e){
-      var r = card.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - .5;
-      var y = (e.clientY - r.top) / r.height - .5;
-      card.style.transform = 'perspective(1000px) rotateX(' + (y * -5) + 'deg) rotateY(' + (x * 6) + 'deg) translateY(-6px)';
-    });
-    card.addEventListener('pointerleave', function(){ card.style.transform = ''; });
-  });
-}
-
-/* marquee duplication for a seamless loop */
-var mq = document.getElementById('mqTrack');
-if(mq) mq.innerHTML += mq.innerHTML;
-
-/* count-up stats */
-var statIo = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(!e.isIntersecting) return;
-    var el = e.target, target = parseInt(el.dataset.count, 10), suffix = el.dataset.suffix || '', t0 = null;
-    function step(ts){
-      if(!t0) t0 = ts;
-      var p = Math.min((ts - t0) / 1100, 1);
-      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
-      if(p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-    statIo.unobserve(el);
-  });
-}, {threshold:.5});
-document.querySelectorAll('[data-count]').forEach(function(el){ statIo.observe(el); });
-
-/* terminal typing sequence */
-var termBody = document.getElementById('termBody');
-var termLines = [
-  {p:'$', t:'jawad new-project --client "coffee shop" --goal "more orders"', cls:''},
-  {p:'>', t:'reading the brief...', cls:'dim'},
-  {p:'\u2713', t:'brand direction set: warm, minimal, appetizing', cls:'ok'},
-  {p:'\u2713', t:'menu + ordering flow designed', cls:'ok'},
-  {p:'\u2713', t:'responsive build: desktop / tablet / phone', cls:'ok'},
-  {p:'\u2713', t:'launch checklist passed \u2014 speed, SEO, contact links', cls:'ok'},
-  {p:'>', t:'result: a site that looks premium and brings clients', cls:''},
-  {p:'$', t:'your project next?', cls:''}
-];
-function runTerminal(){
-  termBody.innerHTML = '';
-  termLines.forEach(function(l, i){
-    var row = document.createElement('div');
-    row.className = 'tline ' + l.cls;
-    row.innerHTML = '<span class="p">' + l.p + '</span><span class="t"></span>';
-    termBody.appendChild(row);
-    var textEl = row.querySelector('.t');
-    setTimeout(function(){
-      row.classList.add('in');
-      if(reduce){ textEl.textContent = l.t; return; }
-      var k = 0;
-      (function typeChar(){
-        textEl.textContent = l.t.slice(0, ++k);
-        if(k < l.t.length) setTimeout(typeChar, 16);
-        else if(i === termLines.length - 1) setTimeout(runTerminal, 5200);
-      })();
-    }, i * 620);
-  });
-}
-if(termBody){
-  var termIo = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ runTerminal(); termIo.disconnect(); } });
-  }, {threshold:.35});
-  termIo.observe(termBody);
-}
-
-/* reels: play in view, sound toggle, drag to scroll */
-var videoIo = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    var v = e.target;
-    if(e.isIntersecting){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
-    else v.pause();
-  });
-}, {threshold:.45});
-document.querySelectorAll('.reel video').forEach(function(v){ videoIo.observe(v); });
-document.querySelectorAll('.reel .sound').forEach(function(btn){
-  btn.addEventListener('click', function(ev){
-    ev.stopPropagation();
-    var v = btn.parentElement.querySelector('video');
-    v.muted = !v.muted;
-    btn.innerHTML = v.muted ? '&#128263;' : '&#128266;';
-    if(!v.muted){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
-  });
-});
-var rail = document.getElementById('rail');
-var railMoved = 0;
-if(rail){
-  var down = false, startX = 0, startLeft = 0;
-  rail.addEventListener('pointerdown', function(e){
-    down = true; railMoved = 0; startX = e.clientX; startLeft = rail.scrollLeft; rail.style.cursor = 'grabbing';
-  });
-  rail.addEventListener('pointermove', function(e){
-    if(!down) return;
-    var d = e.clientX - startX; railMoved = Math.abs(d);
-    rail.scrollLeft = startLeft - d;
-  });
-  ['pointerup','pointerleave','pointercancel'].forEach(function(ev){
-    rail.addEventListener(ev, function(){ down = false; rail.style.cursor = ''; });
-  });
-}
-
-/* media lightbox */
-var modal = document.getElementById('modal');
-var modalBody = document.getElementById('modalBody');
-function openModal(node){
-  modalBody.innerHTML = '';
-  modalBody.appendChild(node);
-  modal.classList.add('open');
-  document.body.classList.add('lock');
-}
-function closeModal(){
-  modal.classList.remove('open');
-  modalBody.innerHTML = '';
-  document.body.classList.remove('lock');
-}
-document.querySelectorAll('.zoom').forEach(function(img){
-  var hit = img.closest('.project-visual') || img;
-  hit.style.cursor = 'zoom-in';
-  hit.setAttribute('role','button');
-  hit.setAttribute('tabindex','0');
-  hit.setAttribute('aria-label','Open ' + (img.getAttribute('alt') || 'image') + ' full size');
-  var openImg = function(){
-    var big = document.createElement('img');
-    big.src = img.src; big.alt = img.alt;
-    openModal(big);
-  };
-  hit.addEventListener('click', openImg);
-  hit.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openImg(); } });
-});
-document.querySelectorAll('.reel').forEach(function(card){
-  var cap = card.querySelector('.cap b');
-  card.setAttribute('role','button');
-  card.setAttribute('tabindex','0');
-  card.setAttribute('aria-label','Play ' + (cap ? cap.textContent : 'video') + ' with sound');
-  var openReel = function(){
-    if(railMoved > 8) return;
-    var src = card.querySelector('video').getAttribute('src');
-    var v = document.createElement('video');
-    v.src = src; v.controls = true; v.autoplay = true; v.loop = true; v.playsInline = true;
-    openModal(v);
-  };
-  card.addEventListener('click', openReel);
-  card.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); railMoved = 0; openReel(); } });
-});
-document.getElementById('modalClose').addEventListener('click', closeModal);
-modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
-window.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); closeMenu(); } });
-
-document.getElementById('year').textContent = new Date().getFullYear();
-}
-/* wait for content.json (written by the /admin panel), then start */
-if(window.__contentReady && window.__contentReady.then){
-  window.__contentReady.then(__initSite, __initSite);
-} else {
-  __initSite();
-}
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>

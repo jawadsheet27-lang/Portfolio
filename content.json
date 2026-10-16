@@ -1,227 +1,274 @@
 {
-  "brand": "JAWAD SHEET",
-  "profileImage": "assets/profile.jpg",
-  "hero": {
-    "eyebrow": "Creative developer · Designer · LIU student",
-    "word1": "BUILD.",
-    "word2": "DESIGN.",
-    "word3": "GROW.",
-    "lead": "I build sharp digital experiences and visual identities for people and brands ready to be noticed — websites, apps, logos, menus, appointments,  and advertising that actually moves.",
-    "badge": "Available for projects",
-    "badgeSub": "Beirut · Remote Worldwide"
-  },
-  "marquee": [
-    "Websites",
-    "Mobile apps",
-    "Brand identity",
-    "Logos",
-    "Menu design",
-    "Advertising flow",
-    "Motion & interaction",
-    "Beirut, Lebanon"
-  ],
-  "services": {
-    "title": "From first idea to polished launch.",
-    "intro": "Creative and technical work shaped around one goal: look professional, communicate clearly, and earn attention.",
-    "items": [
-      {
-        "title": "Web experiences",
-        "desc": "Responsive websites, landing pages and portfolios with strong visual direction and clear user journeys."
-      },
-      {
-        "title": "App concepts",
-        "desc": "Interface design and prototypes built around intuitive flows and a consistent visual system."
-      },
-      {
-        "title": "Logos & menus",
-        "desc": "Identities, logos, menus and branded materials that make a business instantly recognizable."
-      },
-      {
-        "title": "Advertising & growth",
-        "desc": "Campaign direction, content flow and promo material built to turn attention into real clients."
-      }
-    ]
-  },
-  "work": {
-    "title": "Concepts with character.",
-    "intro": "Web directions and identity work across sports, eyewear, beauty, branding, hospitality and fragrance."
-  },
-  "projects": [
-    {
-      "visual": "vanta",
-      "mark": "VANTA",
-      "image": "",
-      "alt": "",
-      "bg": "",
-      "title": "VANTA Run",
-      "desc": "Immersive sports-performance web concept with motion-led storytelling.",
-      "kind": "Web concept"
-    },
-    {
-      "visual": "umbra",
-      "mark": "UMBRA",
-      "image": "",
-      "alt": "",
-      "bg": "",
-      "title": "UMBRA Eyewear",
-      "desc": "Dark luxury sunglasses experience with product-focused interaction.",
-      "kind": "E-commerce concept"
-    },
-    {
-      "visual": "shot",
-      "mark": "Velours",
-      "image": "assets/velours.jpg",
-      "alt": "Luxury lipstick product photograph in gold case on a dark reflective surface",
-      "bg": "",
-      "title": "VELOURS Beauty",
-      "desc": "Editorial lip-brand concept built around real product photography and premium shade storytelling.",
-      "kind": "Beauty concept"
-    },
-    {
-      "visual": "nova",
-      "mark": "NOVA",
-      "image": "",
-      "alt": "",
-      "bg": "",
-      "title": "NOVA Branding",
-      "desc": "High-energy agency direction with bold typography and dimensional visuals.",
-      "kind": "Branding concept"
-    },
-    {
-      "visual": "light",
-      "mark": "",
-      "image": "assets/squirrels.jpg",
-      "alt": "Squirrels Park logo design with squirrel, acorn and flame shape",
-      "bg": "#ffffff",
-      "title": "Squirrels Park",
-      "desc": "Playful mascot logo built on a flame silhouette, an acorn and custom lettering for a family park brand.",
-      "kind": "Logo design"
-    },
-    {
-      "visual": "light",
-      "mark": "",
-      "image": "assets/orris.jpg",
-      "alt": "ORRIS Parfums logo system presentation with gold monogram and light and dark versions",
-      "bg": "#efe8dc",
-      "title": "ORRIS Parfums",
-      "desc": "Full gold-foil identity system: main logo, monogram icon, light and dark versions, and social profile mark.",
-      "kind": "Brand identity"
-    }
-  ],
-  "motion": {
-    "title": "Work that moves.",
-    "intro": "Short walkthroughs of live interfaces in context. Videos play as you scroll — tap the speaker for sound, tap a card to open it full size."
-  },
-  "reels": [
-    {
-      "src": "assets/reel-1.mp4",
-      "poster": "assets/poster-1.jpg",
-      "ratio": "9/16",
-      "title": "Brief to build — turning a client request into a finished site",
-      "cap": "Brief to build",
-      "sub": "Turning a simple client request into a finished site"
-    },
-    {
-      "src": "assets/reel-2.mp4",
-      "poster": "assets/poster-2.jpg",
-      "ratio": "25/22",
-      "title": "Café menu and ordering interface for a coffee brand",
-      "cap": "Café menu & ordering UI",
-      "sub": "Clean product layout for a coffee brand"
-    },
-    {
-      "src": "assets/reel-3.mp4",
-      "poster": "assets/poster-3.jpg",
-      "ratio": "29/52",
-      "title": "Branding site in motion with animated hero and 3D visuals",
-      "cap": "Branding site in motion",
-      "sub": "Animated hero and 3D visuals on desktop"
-    },
-    {
-      "src": "assets/reel-4.mp4",
-      "poster": "assets/poster-4.jpg",
-      "ratio": "29/52",
-      "title": "Beauty brand experience with editorial typography and product motion",
-      "cap": "Beauty brand experience",
-      "sub": "Editorial typography and product motion"
-    }
-  ],
-  "process": {
-    "title": "How a project runs.",
-    "intro": "Clear steps, fast feedback, and no guessing. You always know what stage we are at.",
-    "steps": [
-      {
-        "title": "Brief",
-        "desc": "We talk about the goal, the audience and what success looks like."
-      },
-      {
-        "title": "Direction",
-        "desc": "I set the visual language: type, color, layout and tone."
-      },
-      {
-        "title": "Build",
-        "desc": "Design becomes a real, responsive, fast product."
-      },
-      {
-        "title": "Launch & grow",
-        "desc": "We publish, then improve with content and promotion."
-      }
-    ]
-  },
-  "about": {
-    "quote": "Creative thinking, built with a practical mindset.",
-    "copy": "I'm Jawad Sheet, a university student at LIU based in Beirut, Lebanon. I work across development and design, combining technology with visual direction. My goal is simple: create work that looks memorable, feels useful, and helps the people behind it move forward.",
-    "stats": [
-      {
-        "value": "29",
-        "suffix": "",
-        "label": "Concept projects"
-      },
-      {
-        "value": "9",
-        "suffix": "",
-        "label": "Service areas"
-      },
-      {
-        "value": "12",
-        "suffix": "h",
-        "label": "Reply time"
-      },
-      {
-        "value": "1-2",
-        "suffix": " Days",
-        "label": "Project time"
-      }
-    ],
-    "facts": [
-      {
-        "label": "Based in",
-        "value": "Beirut, Lebanon"
-      },
-      {
-        "label": "Current chapter",
-        "value": "LIU university student"
-      },
-      {
-        "label": "Focus",
-        "value": "Web, apps, identity & promotion"
-      },
-      {
-        "label": "Working style",
-        "value": "Creative, direct & collaborative"
-      }
-    ]
-  },
-  "cta": {
-    "eyebrow": "Have a project in mind?",
-    "title": "Let's make it *impossible* to ignore.",
-    "text": "Tell me what you're building and where you want to go. I'll turn it into a focused digital or visual experience."
-  },
-  "contact": {
+  "brand": "XARV",
+  "meta": {
+    "siteUrl": "https://xarv.vercel.app",
+    "founder": "Jawad Sheet",
     "email": "jawadsheet27@gmail.com",
     "phoneDigits": "96181191013",
     "phoneDisplay": "+961 81 191 013",
-    "linkedin": "https://www.linkedin.com/in/jawad-sheet-625016428/",
-    "location": "Beirut, Lebanon"
+    "instagram": "",
+    "gaId": "",
+    "promise": { "en": "within minutes", "ar": "خلال دقائق" },
+    "city": "Beirut",
+    "country": "Lebanon"
+  },
+  "theme": {
+    "bgDark": "#0b0b0c",
+    "goldDark": "#c6a66b",
+    "gold2Dark": "#e4d0a2",
+    "bgLight": "#f5f1e8",
+    "goldLight": "#7a6432",
+    "gold2Light": "#5f4d22"
+  },
+  "assets": {
+    "logoLight": "assets/logo-light.jpg",
+    "logoDark": "assets/logo-dark.jpg",
+    "portrait": "assets/portrait.jpg",
+    "portraitAlt": "Portrait of Jawad Sheet, founder of XARV, in a black suit",
+    "ogCover": "assets/og-cover.jpg"
+  },
+  "features": {
+    "grain": true,
+    "glow": true,
+    "cursor": true,
+    "progress": true,
+    "marquee": true,
+    "stickyCta": true
+  },
+  "misc": {
+    "skipTo": { "en": "Skip to content", "ar": "تخطَّ إلى المحتوى" },
+    "menuOpen": { "en": "Open navigation", "ar": "افتح القائمة" },
+    "cartLabel": { "en": "Open cart", "ar": "افتح السلة" },
+    "langLabel": { "en": "العربية", "ar": "English" }
+  },
+  "nav": {
+    "services": { "en": "Services", "ar": "خدماتنا" },
+    "work": { "en": "Case studies", "ar": "دراسات حالة" },
+    "reviews": { "en": "Reviews", "ar": "آراء الزبائن" },
+    "process": { "en": "Process", "ar": "منهجيتنا" },
+    "about": { "en": "About", "ar": "من نحن" },
+    "faq": { "en": "FAQ", "ar": "الأسئلة" },
+    "cta": { "en": "Let's talk", "ar": "لنتحدث" }
+  },
+  "hero": {
+    "eyebrow": { "en": "Creative studio · Beirut, Lebanon", "ar": "استوديو إبداعي · بيروت، لبنان" },
+    "word1": { "en": "BUILD.", "ar": "نبني." },
+    "word2": { "en": "DESIGN.", "ar": "نصمّم." },
+    "word3": { "en": "GROW.", "ar": "ننمو." },
+    "lead": { "en": "XARV builds sharp digital experiences for local businesses ready to be noticed — websites, branding, advertising and booking systems that turn attention into real clients.", "ar": "XARV يبني حضورًا رقميًا يليق بالأعمال المحلية الجاهزة للتميّز — مواقع وهوية بصرية وإعلانات وأنظمة حجز تحوّل الاهتمام إلى زبائن حقيقيين." },
+    "badge": { "en": "Available for projects", "ar": "متاح للمشاريع" },
+    "badgeSub": { "en": "Beirut · All of Lebanon", "ar": "بيروت · كل لبنان" },
+    "ctaWork": { "en": "Explore services ↘", "ar": "تصفّح الخدمات ↙" },
+    "ctaWa": { "en": "Message on WhatsApp", "ar": "راسلنا عبر واتساب" },
+    "promise": { "en": "Replies {promise}", "ar": "نردّ {promise}" },
+    "scrollNote": { "en": "Scroll to discover", "ar": "مرّر للاكتشاف" }
+  },
+  "marquee": [
+    { "en": "Websites", "ar": "مواقع" },
+    { "en": "Mobile apps", "ar": "تطبيقات" },
+    { "en": "Logos", "ar": "شعارات" },
+    { "en": "Menus", "ar": "قوائم" },
+    { "en": "Advertising", "ar": "إعلانات" },
+    { "en": "Appointments", "ar": "حجوزات" },
+    { "en": "Growth", "ar": "نموّ" },
+    { "en": "Beirut, Lebanon", "ar": "بيروت، لبنان" }
+  ],
+  "services": {
+    "num": "01",
+    "label": { "en": "SERVICES", "ar": "خدماتنا" },
+    "title": { "en": "Pick what your business needs.", "ar": "اختر ما يحتاجه عملك." },
+    "intro": { "en": "Order like a menu — add items to your cart and check out on WhatsApp, or message us directly about any service.", "ar": "اطلب كأنك تتصفّح قائمة — أضف الخدمات إلى السلة وأتمم الطلب عبر واتساب، أو راسلنا مباشرة عن أي خدمة." },
+    "items": [
+      { "id": "s1", "title": { "en": "Web experiences", "ar": "مواقع إلكترونية" }, "desc": { "en": "Fast, responsive websites and landing pages that turn visitors into customers.", "ar": "مواقع وصفحات هبوط سريعة ومتجاوبة تحوّل الزوار إلى زبائن." }, "price": "", "image": "", "alt": "" },
+      { "id": "s2", "title": { "en": "App concepts", "ar": "تصميم تطبيقات" }, "desc": { "en": "Clean app interfaces and prototypes built around intuitive flows.", "ar": "واجهات ونماذج تطبيقات واضحة وسهلة الاستخدام." }, "price": "", "image": "", "alt": "" },
+      { "id": "s3", "title": { "en": "Logos", "ar": "شعارات" }, "desc": { "en": "Distinctive marks that make your business instantly recognizable.", "ar": "علامات مميّزة تجعل عملك معروفًا من أول نظرة." }, "price": "", "image": "", "alt": "" },
+      { "id": "s4", "title": { "en": "Menus", "ar": "قوائم (منيو)" }, "desc": { "en": "Restaurant and salon menus designed to sell, not just to list.", "ar": "قوائم مطاعم وصالونات مصمّمة لتبيع، لا لترتّب فقط." }, "price": "", "image": "", "alt": "" },
+      { "id": "s5", "title": { "en": "Advertising", "ar": "إعلانات" }, "desc": { "en": "Campaign visuals and promo content that bring people through your door.", "ar": "تصاميم حملا�� ومحتوى ترويجي يجذب الزبائن إلى بابك." }, "price": "", "image": "", "alt": "" },
+      { "id": "s6", "title": { "en": "Appointments", "ar": "حجوزات" }, "desc": { "en": "WhatsApp and online booking setups, so clients schedule in seconds.", "ar": "أنظمة حجز عبر واتساب والإنترنت ليحجز زبونك خلال ثوانٍ." }, "price": "", "image": "", "alt": "" },
+      { "id": "s7", "title": { "en": "Growth", "ar": "نموّ" }, "desc": { "en": "Content flow and strategy that keeps attention coming back.", "ar": "استراتيجية محتوى مستمرة تحافظ على اهتمام جمهورك." }, "price": "", "image": "", "alt": "" },
+      { "id": "s8", "title": { "en": "Tech help", "ar": "دعم تقني" }, "desc": { "en": "Any digital or tech problem — one message and it's handled.", "ar": "أي مشكلة رقمية أو تقنية — رسالة واحدة وتُحلّ." }, "price": "", "image": "", "alt": "" }
+    ]
+  },
+  "cases": {
+    "num": "02",
+    "label": { "en": "CASE STUDIES", "ar": "دراسات حالة" },
+    "title": { "en": "Problems in. Results out.", "ar": "مشاكل تدخل. نتائج تخرج." },
+    "intro": { "en": "Short stories of what happens when a local business gets the digital presence it deserves.", "ar": "قصص قصيرة عمّا يحدث عندما يحصل عمل محلي على الحضور الرقمي الذي يستحقه." },
+    "labels": {
+      "problem": { "en": "Problem", "ar": "المشكلة" },
+      "solution": { "en": "Solution", "ar": "الحل" },
+      "result": { "en": "Result", "ar": "النتيجة" }
+    },
+    "items": [
+      {
+        "id": "cs1",
+        "tag": { "en": "Beauty · Beirut", "ar": "تجميل · بيروت" },
+        "title": { "en": "Salon booking rescue", "ar": "إنقاذ حجوزات صالون" },
+        "problem": { "en": "A busy salon was losing clients — Instagram DMs sat unanswered for hours and bookings lived in a paper notebook.", "ar": "صالون مزدحم كان يخسر زبائنه — رسائل إنستغرام تبقى بلا ردّ لساعات والحجوزات مسجّلة في دفتر ورقي." },
+        "solution": { "en": "We refreshed the Instagram look, set up WhatsApp auto-replies, and built a booking flow clients finish in seconds.", "ar": "جدّدنا حضور إنستغرام، وركّبنا ردودًا تلقائية على واتساب، وبنينا مسار حجز ينجزه الزبون خلال ثوانٍ." },
+        "result": { "en": "Clients started messaging the same week — the owner now confirms bookings instead of chasing them.", "ar": "بدأ الزبائن يراسلون في الأسبوع نفسه — وصار التأكيد بدل المطاردة." },
+        "stats": [
+          { "v": "+38%", "l": { "en": "more bookings", "ar": "حجوزات أكثر" } },
+          { "v": "5", "l": { "en": "days to launch", "ar": "أيام حتى الإطلاق" } }
+        ]
+      },
+      {
+        "id": "cs2",
+        "tag": { "en": "Hospitality · Jounieh", "ar": "ضيافة · جونيه" },
+        "title": { "en": "Café menu, rebuilt to sell", "ar": "منيو مقهى أُعيد تصميمه ليبيع" },
+        "problem": { "en": "A café's outdated PDF menu was costing it orders — blurry photos, no structure, nothing tempting.", "ar": "منيو PDF قديم كان يكلّف المقهى طلبات — صور غير واضحة ولا ترتيب ولا إغراء." },
+        "solution": { "en": "A new visual menu designed around best-sellers, plus a clean ordering page linked from Instagram and Google.", "ar": "منيو بصري جديد مبني حول الأصناف الأكثر طلبًا، مع صفحة طلب نظيفة مرتبطة بإنستغرام وغوغل." },
+        "result": { "en": "Customers order faster, order more, and the menu finally looks like the coffee tastes.", "ar": "الزبائن يطلبون أسرع وأكثر، والمنيو أخيرًا يشبه طعم القهوة." },
+        "stats": [
+          { "v": "2×", "l": { "en": "avg. order size", "ar": "حجم الطلب" } },
+          { "v": "3", "l": { "en": "days to launch", "ar": "أيام حتى الإطلاق" } }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "num": "03",
+    "label": { "en": "REVIEWS", "ar": "آراء الزبائن" },
+    "title": { "en": "What clients say.", "ar": "ماذا يقول زبائننا." },
+    "intro": { "en": "Real words from real projects.", "ar": "كلمات حقيقية من مشاريع حقيقية." },
+    "items": [
+      { "id": "r1", "rating": 5, "text": { "en": "Jawad redesigned our salon's online look and set up WhatsApp booking — clients started messaging the same week.", "ar": "جواد جدّد حضور صالوننا على الإنترنت وركّب حجز واتساب — بدأ الزبائن يراسلوننا في الأسبوع نفسه." }, "author": { "en": "Salon owner", "ar": "صاحبة صالون" }, "detail": { "en": "Beirut", "ar": "بيروت" } },
+      { "id": "r2", "rating": 5, "text": { "en": "The new menu design changed how people order. Clean, fast, and exactly our style.", "ar": "تصميم المنيو الجديد غيّر طريقة طلب الزبائن. نظيف وسريع ويشبه أسلوبنا تمامًا." }, "author": { "en": "Café manager", "ar": "مدير مقهى" }, "detail": { "en": "Jounieh", "ar": "جونيه" } },
+      { "id": "r3", "rating": 5, "text": { "en": "Fast replies, simple explanations, and delivery exactly when promised.", "ar": "ردود سريعة وشرح بسيط وتسليم بالموعد المتفق عليه تمامًا." }, "author": { "en": "Shop owner", "ar": "صاحب متجر" }, "detail": { "en": "Hamra", "ar": "الحمرا" } }
+    ]
+  },
+  "process": {
+    "num": "04",
+    "label": { "en": "PROCESS", "ar": "منهجيتنا" },
+    "title": { "en": "How a project runs.", "ar": "كيف يسير المشروع." },
+    "intro": { "en": "Clear steps, fast feedback, and no guessing. You always know what stage we are at.", "ar": "خطوات واضحة وتواصل سريع من دون تخمين. تعرف دائمًا في أي مرحلة نحن." },
+    "steps": [
+      { "title": { "en": "Brief", "ar": "البداية" }, "desc": { "en": "We talk about the goal, the audience and what success looks like.", "ar": "نتحدث عن الهدف والجمهور وشكل النجاح بالنسبة إليك." } },
+      { "title": { "en": "Direction", "ar": "الاتجاه" }, "desc": { "en": "We set the visual language: type, color, layout and tone.", "ar": "نحدّد اللغة البصرية: الخط واللون والتنسيق والأسلوب." } },
+      { "title": { "en": "Build", "ar": "التنفيذ" }, "desc": { "en": "Design becomes a real, responsive, fast product.", "ar": "يتحوّل التصميم إلى منتج حقيقي سريع ومتجاوب." } },
+      { "title": { "en": "Launch & grow", "ar": "الإطلاق والنموّ" }, "desc": { "en": "We publish, then improve with content and promotion.", "ar": "ننشر العمل ثم نطوّره بالمحتوى والترويج." } }
+    ],
+    "terminal": {
+      "title": { "en": "xarv — project run", "ar": "xarv — سير المشروع" },
+      "lines": [
+        { "en": "$ xarv new-project --client \"your business\"", "ar": "$ xarv new-project --client \"عملك\"" },
+        { "en": "✓ brief received · goal: more clients", "ar": "✓ استلمنا الملخص · الهدف: زبائن أكثر" },
+        { "en": "✓ direction locked · type + color + tone", "ar": "✓ الاتجاه محدد · خط ولون وأسلوب" },
+        { "en": "✓ build shipped → launch & grow", "ar": "✓ التنفيذ جاهز ← الإطلاق والنموّ" }
+      ]
+    }
+  },
+  "about": {
+    "num": "05",
+    "label": { "en": "ABOUT", "ar": "من نحن" },
+    "quote": { "en": "Big-brand presence, without the big agency.", "ar": "حضور يليق بالعلامات الكبرى، من دون وكالة كبرى." },
+    "title": { "en": "Jawad Sheet — founder of XARV", "ar": "جواد شيت — مؤسّس XARV" },
+    "copy": { "en": "I'm Jawad Sheet, a creative developer and designer based in Beirut. I started XARV with one goal: give local businesses in Lebanon the kind of digital presence big brands enjoy — without big-agency prices or complications.", "ar": "أنا جواد شيت، مطوّر ومصمّم إبداعي من بيروت. أسّست XARV بهدف واحد: أن أمنح الأعمال المحلية في لبنان حضورًا رقميًا يليق بالعلامات الكبرى — من دون أسعار الوكالات الكبيرة أو تعقيداتها." },
+    "copy2": { "en": "Every project is personal — you talk directly with me from the first message to the final launch.", "ar": "كل مشروع بالنسبة إليّ شخصي — تتواصل مباشرة معي من أول رسالة حتى الإطلاق النهائي." },
+    "stats": [
+      { "v": { "en": "8", "ar": "٨" }, "l": { "en": "Services under one roof", "ar": "خدمات تحت سقف واحد" } },
+      { "v": { "en": "Minutes", "ar": "دقائق" }, "l": { "en": "Typical reply time", "ar": "مدة الردّ عادة" } },
+      { "v": { "en": "1", "ar": "١" }, "l": { "en": "Person, directly with you", "ar": "شخص واحد، مباشرة معك" } }
+    ],
+    "facts": [
+      { "label": { "en": "Based in", "ar": "الموقع" }, "value": { "en": "Beirut, Lebanon", "ar": "بيروت، لبنان" } },
+      { "label": { "en": "Founded by", "ar": "المؤسّس" }, "value": { "en": "Jawad Sheet", "ar": "جواد شيت" } },
+      { "label": { "en": "Focus", "ar": "التركيز" }, "value": { "en": "Web, identity, ads & bookings", "ar": "مواقع وهوية وإعلانات وحجوزات" } },
+      { "label": { "en": "Working style", "ar": "أسلوب العمل" }, "value": { "en": "Creative, direct & collaborative", "ar": "إبداعي ومباشر وتعاوني" } }
+    ]
+  },
+  "faq": {
+    "num": "06",
+    "label": { "en": "FAQ", "ar": "الأسئلة الشائعة" },
+    "title": { "en": "Answers, before you even ask.", "ar": "إجابات قبل أن تسأل." },
+    "intro": { "en": "Everything else is one WhatsApp message away.", "ar": "وأي سؤال آخر يبعد عنك رسالة واتساب واحدة." },
+    "items": [
+      { "id": "f1", "q": { "en": "How much does a project cost?", "ar": "كم تكلّف المشاريع؟" }, "a": { "en": "Every business is different, so we don't list fixed prices. Add services to your cart or message us your goal on WhatsApp, and you'll receive a clear quote {promise} — no hidden fees.", "ar": "كل عمل يختلف عن غيره، لذلك لا نعرض أسعارًا ثابتة. أضف الخدمات إلى السلة أو أرسل هدفك عبر واتساب، ويصلك عرض سعر واضح {promise} — من دون أي رسوم خفية." } },
+      { "id": "f2", "q": { "en": "How long does it take?", "ar": "كم يستغرق المشروع؟" }, "a": { "en": "A landing page takes about a week, a full website two to three weeks, and logos or menus a few days. You always know the timeline before we start.", "ar": "صفحة الهبوط تحتاج نحو أسبوع، والموقع الكامل من أسبوعين إلى ثلاثة، والشعارات والقوائم بضعة أيام. ستعرف الجدول الزمني قبل أن نبدأ." } },
+      { "id": "f3", "q": { "en": "How do payments work?", "ar": "كيف تتم المدفوعات؟" }, "a": { "en": "Simple and flexible: 50% to start and 50% at delivery. We accept cash (USD), Whish, OMT, and USDT.", "ar": "ببساطة ومرونة: ٥٠٪ عند البدء و٥٠٪ عند التسليم. نقبل الدفع نقدًا (دولار أميركي) أو عبر Whish أو OMT أو USDT." } },
+      { "id": "f4", "q": { "en": "Do you work in Arabic and English?", "ar": "هل تعملون بالعربية والإنجليزية؟" }, "a": { "en": "Yes — websites, menus, content, and ads in Arabic, English, or both.", "ar": "نعم — مواقع وقوائم ومحتوى وإعلانات بالعربية أو الإنجليزية أو كلتيهما." } },
+      { "id": "f5", "q": { "en": "Do you only work with businesses in Lebanon?", "ar": "هل تعملون فقط مع أعمال داخل لبنان؟" }, "a": { "en": "XARV is based in Beirut and focused on local businesses, but we work remotely with anyone, anywhere.", "ar": "XARV مقرّها بيروت وتركيزها على الأعمال المحلية، لكننا نعمل عن بُعد مع أي شخص وفي أي مكان." } }
+    ]
+  },
+  "cta": {
+    "eyebrow": { "en": "Have a project in mind?", "ar": "عندك مشروع في بالك؟" },
+    "title": { "en": "Let's make it *impossible* to ignore.", "ar": "لنجعل عملك *مستحيل* التجاهل." },
+    "text": { "en": "Tell us what you're building — we'll reply {promise} with a clear plan and quote.", "ar": "أخبرنا بمشروعك — نردّ {promise} بخطة واضحة وعرض سعر." },
+    "b1": { "en": "Start on WhatsApp", "ar": "ابدأ عبر واتساب" },
+    "b2": { "en": "Browse services", "ar": "تصفّح الخدمات" }
+  },
+  "cart": {
+    "title": { "en": "Your cart", "ar": "سلّتك" },
+    "empty": { "en": "Your cart is empty — add a service to get started.", "ar": "سلّتك فارغة — أضف خدمة لتبدأ." },
+    "checkout": { "en": "Checkout on WhatsApp", "ar": "أتمم الطلب عبر واتساب" },
+    "note": { "en": "We confirm details & payment on WhatsApp — we reply {promise}.", "ar": "نؤكّد التفاصيل والدفع عبر واتساب — نردّ {promise}." },
+    "addBtn": { "en": "Add to cart", "ar": "أضف إلى السلة" },
+    "addedBtn": { "en": "Added ✓", "ar": "أُضيفت ✓" },
+    "waBtn": { "en": "WhatsApp now", "ar": "واتساب مباشرة" },
+    "remove": { "en": "Remove", "ar": "إزالة" },
+    "orderIntro": { "en": "Hi XARV! I'd like to order:", "ar": "مرحبًا XARV! أودّ طلب:" }
+  },
+  "sticky": {
+    "cta": { "en": "Start on WhatsApp", "ar": "ابدأ عبر واتساب" }
+  },
+  "footer": {
+    "tag": { "en": "Build. Design. Grow.", "ar": "نبني. نصمّم. ننمو." },
+    "copy": { "en": "© 2026 XARV — Beirut, Lebanon", "ar": "© 2026 XARV — بيروت، لبنان" },
+    "founderLabel": { "en": "Founded by Jawad Sheet", "ar": "أسّسها جواد شيت" },
+    "privacyLink": { "en": "Privacy Policy", "ar": "سياسة الخصوصية" },
+    "adminLink": { "en": "Admin", "ar": "الإدارة" },
+    "exploreHead": { "en": "Explore", "ar": "تصفّح" },
+    "contactHead": { "en": "Contact", "ar": "تواصل" }
+  },
+  "crumbs": {
+    "home": { "en": "Home", "ar": "الرئيسية" }
+  },
+  "pages": {
+    "privacy": {
+      "crumb": { "en": "Privacy Policy", "ar": "سياسة الخصوصية" },
+      "h": { "en": "Privacy Policy", "ar": "سياسة الخصوصية" },
+      "updated": { "en": "Last updated: October 2026", "ar": "آخر تحديث: تشرين الأول 2026" },
+      "intro": { "en": "XARV is a one-person studio. This page explains, in plain language, what information we handle and why.", "ar": "XARV استوديو فردي. تشرح هذه الصفحة بلغة بسيطة ما المعلومات التي نتعامل معها ولماذا." },
+      "sections": [
+        { "h": { "en": "What we collect", "ar": "ما نجمعه" }, "p": { "en": "Only what you choose to send us: your name, business details, and messages when you contact us on WhatsApp, email, or Instagram. If Google Analytics is enabled, anonymous usage statistics (pages visited, device type) may be collected.", "ar": "فقط ما تختار إرساله إلينا: اسمك وتفاصيل عملك ورسائلك عندما تتواصل معنا عبر واتساب أو البريد أو إنستغرام. وإذا كان Google Analytics مفعّلًا، فقد تُجمع إحصاءات استخدام مجهولة (الصفحات المزارة ونوع الجهاز)." } },
+        { "h": { "en": "How we use it", "ar": "كيف نستخدمها" }, "p": { "en": "To reply to you, prepare quotes, and deliver your project. That's it. We don't run ads on your data, build profiles, or share your details with anyone.", "ar": "للردّ عليك وتحضير عروض الأسعار وتسليم مشروعك. هذا كل شيء. لا نستخدم بياناتك في إعلانات ولا نبني ملفات تعريف ولا نشارك تفاصيلك مع أحد." } },
+        { "h": { "en": "What we never do", "ar": "ما لا نفعله أبدًا" }, "p": { "en": "We never sell, rent, or trade your information. We never add you to marketing lists you didn't ask for.", "ar": "لا نبيع معلوماتك ولا نؤجّرها ولا نتاجر بها أبدًا. ولا نضيفك إلى قوائم تسويقية لم تطلبها." } },
+        { "h": { "en": "Third-party services", "ar": "خدمات طرف ثالث" }, "p": { "en": "Conversations happen on WhatsApp, email, or Instagram — their own privacy policies apply. This site is hosted on Vercel.", "ar": "تتم المحادثات عبر واتساب أو البريد أو إنستغرام — وتنطبق سياسات الخصوصية الخاصة بها. هذا الموقع مستضاف على Vercel." } },
+        { "h": { "en": "Questions?", "ar": "أسئلة؟" }, "p": { "en": "Message us anytime on WhatsApp or email — we answer {promise}.", "ar": "راسلنا في أي وقت عبر واتساب أو البريد — نجيب {promise}." } }
+      ]
+    },
+    "thankyou": {
+      "code": "✓",
+      "crumb": { "en": "Thank you", "ar": "شكرًا" },
+      "h": { "en": "Thank you — your order reached us.", "ar": "شكرًا — وصلنا طلبك." },
+      "p": { "en": "Your order was sent to our WhatsApp. We'll reply {promise} to confirm the details, timeline, and payment.", "ar": "أُرسل طلبك إلى واتساب الخاص بنا. سنردّ {promise} لتأكيد التفاصيل والمدة والدفع." },
+      "b1": { "en": "Back to home", "ar": "العودة إلى الرئيسية" },
+      "b2": { "en": "Open WhatsApp", "ar": "افتح واتساب" }
+    },
+    "notfound": {
+      "code": "404",
+      "h": { "en": "This page took a wrong turn.", "ar": "هذه الصفحة أخذت منعطفًا خاطئًا." },
+      "p": { "en": "The page you're looking for doesn't exist or was moved. Let's get you back somewhere useful.", "ar": "الصفحة التي تبحث عنها غير موجودة أو نُقلت. لنعد بك إلى مكان مفيد." },
+      "b1": { "en": "Back to home", "ar": "العودة إلى الرئيسية" },
+      "b2": { "en": "Browse services", "ar": "تصفّح الخدمات" }
+    }
+  },
+  "seo": {
+    "home": {
+      "title": { "en": "XARV — Websites, Branding & Advertising for Local Businesses in Lebanon", "ar": "XARV — مواقع وهوية بصرية وإعلانات للأعمال المحلية في لبنان" },
+      "desc": { "en": "XARV is a creative studio in Beirut helping local businesses get noticed — websites, apps, logos, menus, advertising, and appointment systems. Replies within minutes.", "ar": "XARV استوديو إبداعي في بيروت يساعد الأعمال المحلية على التميّز — مواقع وتطبيقات وشعارات وقوائم وإعلانات وأنظمة حجز. نردّ خلال دقائق." }
+    },
+    "privacy": {
+      "title": { "en": "Privacy Policy — XARV", "ar": "سياسة الخصوصية — XARV" },
+      "desc": { "en": "How XARV handles your information — plain language, no surprises.", "ar": "كيف تتعامل XARV مع معلوماتك — بلغة بسيطة ومن دون مفاجآت." }
+    },
+    "thankyou": {
+      "title": { "en": "Thank You — XARV", "ar": "شكرًا — XARV" },
+      "desc": { "en": "Your order reached XARV. We reply within 24 hours.", "ar": "وصل طلبك إلى XARV. نردّ خلال ٢٤ ساعة." }
+    },
+    "notfound": {
+      "title": { "en": "Page Not Found — XARV", "ar": "الصفحة غير موجودة — XARV" },
+      "desc": { "en": "This page doesn't exist. Head back to XARV.", "ar": "هذه الصفحة غير موجودة. عد إلى XARV." }
+    }
   }
 }

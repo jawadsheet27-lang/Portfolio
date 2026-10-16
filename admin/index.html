@@ -1,596 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YK1092Z2J5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YK1092Z2J5');
-</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Site admin &middot; Jawad Sheet</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='%23c6a66b' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XARV Admin</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23c6a66b' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E">
 <style>
+:root{--ink:#0b0b0c;--ink2:#121214;--ink3:#181816;--paper:#f2eee7;--gold:#c6a66b;--gold2:#e4d0a2;--muted:#a29e97;--line:rgba(255,255,255,.14);--ok:#72BC8F;--err:#E97366}
 *{box-sizing:border-box}
-:root{--ink:#0b0b0c;--ink2:#141416;--ink3:#1c1c20;--paper:#f2eee7;--gold:#c6a66b;--gold2:#e4d0a2;--muted:#a29e97;--line:rgba(255,255,255,.14);--ok:#4ecb8b;--bad:#ff6b6b}
-html,body{margin:0;background:var(--ink);color:var(--paper);font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:600;margin:0}
-a{color:var(--gold2)}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:Arial,Helvetica,sans-serif;line-height:1.5;min-height:100vh}
+[hidden]{display:none!important}
 button{font:inherit;cursor:pointer}
-/* ---------- login ---------- */
-.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:100%;max-width:420px;background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:34px}
-.card h1{font-size:26px;letter-spacing:.01em}
-.card p{color:var(--muted);font-size:14px}
-.lbl{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:18px 0 7px}
-input,textarea,select{width:100%;background:#0f0f11;border:1px solid var(--line);color:var(--paper);border-radius:10px;padding:12px 13px;font:inherit}
-input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
-textarea{min-height:92px;resize:vertical;line-height:1.5}
-.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:transparent;border:1px solid var(--line);color:var(--paper);border-radius:999px;padding:12px 22px;font-size:14px;font-weight:600;letter-spacing:.02em;transition:.18s}
+input,textarea{font:inherit;color:var(--paper);background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;font-size:14px}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+textarea{min-height:84px;resize:vertical;line-height:1.6}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 7px}
+[dir="rtl"]{font-family:'Noto Sans Arabic',Arial,sans-serif}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 18px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--paper);font-weight:700;font-size:13px;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
 .btn:hover{border-color:var(--gold);color:var(--gold2)}
-.btn.gold{background:var(--gold);border-color:var(--gold);color:#151208}
-.btn.gold:hover{background:var(--gold2);color:#151208}
-.btn.sm{padding:7px 13px;font-size:12.5px}
-.btn.danger:hover{border-color:var(--bad);color:var(--bad)}
-.msg{margin-top:16px;font-size:13.5px;padding:11px 13px;border-radius:10px;display:none}
-.msg.show{display:block}
-.msg.err{background:rgba(255,107,107,.12);color:#ffb3b3;border:1px solid rgba(255,107,107,.35)}
-.msg.ok{background:rgba(78,203,139,.1);color:#a8e9c6;border:1px solid rgba(78,203,139,.3)}
-.msg.warn{background:rgba(198,166,107,.1);color:var(--gold2);border:1px solid rgba(198,166,107,.32)}
-/* ---------- shell ---------- */
-.shell{display:none;min-height:100vh}
-.shell.on{display:block}
-.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 22px;background:rgba(11,11,12,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .name{font-weight:800;letter-spacing:.16em;font-size:13px}
-.top .name i{color:var(--gold);font-style:normal}
-.spacer{flex:1}
-.wrap{display:grid;grid-template-columns:214px 1fr;gap:0;align-items:start}
-.side{position:sticky;top:63px;padding:22px 12px;border-right:1px solid var(--line);min-height:calc(100vh - 63px)}
-.side button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--muted);padding:10px 13px;border-radius:9px;font-size:14px}
-.side button:hover{color:var(--paper);background:var(--ink2)}
-.side button.on{background:var(--ink3);color:var(--gold2);font-weight:600}
-.main{padding:28px 30px 90px;max-width:920px}
-.panel{display:none}
-.panel.on{display:block}
-.panel>h2{font-size:24px;margin-bottom:4px}
-.panel>.hint{color:var(--muted);font-size:13.5px;margin:0 0 22px}
-.field{margin-bottom:18px}
-.field .lbl{margin-top:0}
-.field .note{color:var(--muted);font-size:12.5px;margin-top:6px}
-.item{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--ink2)}
-.item-top{display:flex;align-items:center;gap:9px;margin-bottom:12px}
-.item-top b{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.thumb{display:flex;align-items:center;gap:14px;margin-top:8px}
-.thumb img{width:92px;height:92px;object-fit:cover;border-radius:10px;background:#000;border:1px solid var(--line)}
-.file{position:relative;overflow:hidden;display:inline-block}
-.file input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:13px 22px;background:rgba(11,11,12,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
-.bar .state{font-size:13px;color:var(--muted)}
-.pill{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
-.pill.live{border-color:rgba(78,203,139,.5);color:#a8e9c6}
-.pill.off{border-color:rgba(198,166,107,.5);color:var(--gold2)}
-@media(max-width:780px){
-  .wrap{grid-template-columns:1fr}
-  .side{position:static;min-height:0;border-right:0;border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:10px}
-  .side button{white-space:nowrap;width:auto}
-  .main{padding:22px 18px 210px}
-  .row2{grid-template-columns:1fr}
-  .bar{padding:11px 14px;gap:10px;background:#0b0b0c}
-  .bar .btn{flex:1 1 auto;justify-content:center;text-align:center}
-  .bar .state{width:100%;order:3;text-align:center}
-  .top{padding:11px 14px;gap:10px}
-}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#17140f}
+.btn.gold:hover{background:var(--gold2);border-color:var(--gold2);color:#17140f}
+.btn.sm{min-height:34px;padding:0 13px;font-size:12px}
+.btn:disabled{opacity:.45;pointer-events:none}
+
+/* login */
+.login{min-height:100vh;display:grid;place-items:center;padding:24px}
+.login-card{width:min(400px,100%);border:1px solid var(--line);border-radius:18px;background:var(--ink2);padding:38px 32px}
+.login-card .logo{width:56px;height:56px;border-radius:14px;border:1px solid var(--line);margin-bottom:18px;object-fit:cover}
+.login-card h1{font-size:26px;letter-spacing:-.03em;margin:0 0 6px}
+.login-card p{color:var(--muted);font-size:13.5px;margin:0 0 24px}
+.login-card .fld{margin-bottom:16px}
+.login-err{color:var(--err);font-size:13px;margin:12px 0 0;min-height:18px}
+.login-note{color:var(--muted);font-size:12px;margin-top:20px;line-height:1.6;border-top:1px solid var(--line);padding-top:16px}
+
+/* editor */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(11,11,12,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1180px;margin:auto;padding:14px 24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.topbar .wm{font-weight:800;letter-spacing:.16em;font-size:14px;color:var(--gold)}
+.topbar .dot{font-size:12px;color:var(--muted)}
+.topbar .dot.dirty{color:var(--gold2)}
+.topbar .spacer{flex:1}
+.tabs{display:flex;gap:6px;overflow-x:auto;max-width:1180px;margin:0 auto;padding:12px 24px 0;scrollbar-width:thin}
+.tab{border:1px solid transparent;background:transparent;color:var(--muted);border-radius:999px;padding:8px 15px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.tab:hover{color:var(--paper)}
+.tab.on{background:var(--ink3);border-color:var(--line);color:var(--gold2)}
+.pane{max-width:1180px;margin:0 auto;padding:28px 24px 140px}
+.sec{border:1px solid var(--line);border-radius:16px;background:var(--ink2);padding:24px;margin-bottom:18px}
+.sec > h2{font-size:16px;letter-spacing:-.01em;margin:0 0 4px}
+.sec > .hint{color:var(--muted);font-size:12.5px;margin:0 0 18px;line-height:1.6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}}
+.fld{margin-bottom:14px}
+.fld:last-child{margin-bottom:0}
+.ar-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:720px){.ar-row{grid-template-columns:1fr}}
+.ar-row .col-l{position:relative}
+.ar-row .tag{position:absolute;top:-7px;inset-inline-start:10px;background:var(--ink2);padding:0 6px;font-size:10px;letter-spacing:.12em;color:var(--gold);font-weight:800}
+.item{border:1px solid var(--line);border-radius:14px;background:var(--ink);padding:18px;margin-bottom:14px}
+.item-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.item-head .t{font-size:13px;font-weight:700;color:var(--gold2);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item-head .acts{display:flex;gap:6px}
+.mini{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:13px;display:grid;place-items:center}
+.mini:hover{border-color:var(--gold);color:var(--gold2)}
+.mini.danger:hover{border-color:var(--err);color:var(--err)}
+.add-btn{width:100%;border:1px dashed var(--line);background:transparent;color:var(--muted);border-radius:12px;padding:12px;font-size:13px;font-weight:700}
+.add-btn:hover{border-color:var(--gold);color:var(--gold2)}
+.sub-list{border-top:1px dashed var(--line);margin-top:16px;padding-top:14px}
+.sub-list > .lbl{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.sub-item{display:flex;gap:10px;align-items:end;margin-bottom:10px}
+.sub-item .grow{flex:1}
+.banner{border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);background:rgba(198,166,107,.08);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--gold2);margin-bottom:18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.banner.warn{border-color:color-mix(in srgb,var(--err) 45%,transparent);color:var(--err);background:rgba(233,115,102,.07)}
+.actionbar{position:fixed;bottom:0;left:0;right:0;z-index:20;background:rgba(11,11,12,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.actionbar-in{max-width:1180px;margin:auto;padding:14px 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.status{font-size:12.5px;color:var(--muted);flex:1;min-width:180px}
+.status.ok{color:var(--ok)}
+.status.err{color:var(--err)}
+.loadfile{border:1px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--muted);font-size:13px}
+.loadfile input{margin-top:12px}
 </style>
 </head>
 <body>
 
-<!-- ===================== LOGIN ===================== -->
-<div class="gate" id="gate">
-  <div class="card">
-    <h1>Site admin</h1>
-    <p>Edit your portfolio and publish it live.</p>
-    <label class="lbl" for="pw">Password</label>
-    <input id="pw" type="password" autocomplete="current-password" placeholder="••••••••••">
-    <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-      <button class="btn gold" id="loginBtn">Enter</button>
-      <button class="btn" id="offlineBtn">Open without publishing</button>
-    </div>
-    <div class="msg" id="gateMsg"></div>
-  </div>
+<!-- LOGIN -->
+<div class="login" id="loginView">
+  <form class="login-card" id="loginForm">
+    <img class="logo" src="../assets/logo-dark.jpg" alt="XARV logo">
+    <h1>XARV Admin</h1>
+    <p>Your private editing panel. Everything on the site is editable here.</p>
+    <div class="fld"><label for="user">Username</label><input id="user" autocomplete="username" required></div>
+    <div class="fld"><label for="pass">Password</label><input id="pass" type="password" autocomplete="current-password" required></div>
+    <button class="btn gold" type="submit" style="width:100%" id="loginBtn">Log in</button>
+    <p class="login-err" id="loginErr"></p>
+    <p class="login-note">Set up or change this login in Vercel → Settings → Environment Variables (ADMIN_USERNAME / ADMIN_PASSWORD). See DEPLOY-ADMIN.txt.</p>
+  </form>
 </div>
 
-<!-- ===================== EDITOR ===================== -->
-<div class="shell" id="shell">
-  <div class="top">
-    <div class="name">JAWAD SHEET <i>/ admin</i></div>
-    <span class="pill" id="modePill">checking…</span>
-    <div class="spacer"></div>
-    <a class="btn sm" href="../" target="_blank" rel="noopener">View site ↗</a>
-    <button class="btn sm" id="logoutBtn">Log out</button>
+<!-- EDITOR -->
+<div id="editorView" hidden>
+  <div class="topbar">
+    <div class="topbar-in">
+      <span class="wm">XARV ADMIN</span>
+      <span class="dot" id="dirtyDot">All changes saved</span>
+      <span class="spacer"></span>
+      <a class="btn sm" href="../index.html" target="_blank" rel="noopener">View site ↗</a>
+      <button class="btn sm" id="logoutBtn">Log out</button>
+    </div>
+    <div class="tabs" id="tabs"></div>
   </div>
-
-  <div class="wrap">
-    <nav class="side" id="side"></nav>
-    <div class="main" id="main"></div>
-  </div>
-
-  <div class="bar">
-    <button class="btn gold" id="publishBtn">Publish to my website</button>
-    <button class="btn sm" id="downloadBtn">Download content.json</button>
-    <button class="btn sm danger" id="resetBtn">Undo all my changes</button>
-    <span class="state" id="state"></span>
+  <div class="pane" id="pane"></div>
+  <div class="actionbar">
+    <div class="actionbar-in">
+      <span class="status" id="status">—</span>
+      <button class="btn sm" id="previewBtn">Preview draft</button>
+      <button class="btn sm" id="clearDraftBtn">Clear preview</button>
+      <button class="btn sm" id="downloadBtn">Download content.json</button>
+      <button class="btn gold sm" id="publishBtn">Publish to my website</button>
+    </div>
   </div>
 </div>
 
 <script>
-(function(){
-'use strict';
+(function () {
+  "use strict";
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-var API = '../api/save';
-var DRAFT = 'jawad-admin-draft-v1';
-var data = null, original = null, password = '', canPublish = false;
-var UPLOADS = [];           /* [{path, base64, mime}] */
-var PREVIEW = {};           /* path -> local dataURL, so you see it before publishing */
-var activeSection = 'hero';
+  var D = null;            // working copy of content.json
+  var USER = "", PASS = "";
+  var ONLINE = true;       // false when /api/save is unreachable (local file etc.)
+  var TAB = "general";
 
-/* ---------- tiny helpers ---------- */
-function el(id){ return document.getElementById(id); }
-function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function get(path){
-  return path.split('.').reduce(function(o,k){ return (o == null) ? undefined : o[k]; }, data);
-}
-function set(path, val){
-  var parts = path.split('.'), last = parts.pop();
-  var o = parts.reduce(function(o,k){ if(o[k] == null) o[k] = {}; return o[k]; }, data);
-  o[last] = val;
-}
-function say(txt, kind){
-  var s = el('state');
-  s.textContent = txt || '';
-  s.style.color = kind === 'err' ? '#ffb3b3' : (kind === 'ok' ? '#a8e9c6' : '');
-}
-function gateMsg(txt, kind){
-  var m = el('gateMsg');
-  m.className = 'msg show ' + (kind || 'err');
-  m.innerHTML = txt;
-}
-function imgSrc(p){
-  if(!p) return '';
-  if(PREVIEW[p]) return PREVIEW[p];
-  if(/^(https?:|data:)/.test(p)) return p;
-  return '../' + p;
-}
-var draftTimer = null;
-function touch(){
-  clearTimeout(draftTimer);
-  draftTimer = setTimeout(function(){
-    try{ localStorage.setItem(DRAFT, JSON.stringify({content:data, uploads:UPLOADS})); }catch(e){}
-  }, 400);
-  say('Unsaved changes — press Publish when you are ready.');
-}
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function getP(o, p) { return p.split(".").reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+  function setP(o, p, v) { var ks = p.split("."); var c = o; for (var i = 0; i < ks.length - 1; i++) { if (c[ks[i]] == null) c[ks[i]] = /^\d+$/.test(ks[i + 1]) ? [] : {}; c = c[ks[i]]; } c[ks[ks.length - 1]] = v; }
+  function status(msg, cls) { var s = $("#status"); s.textContent = msg; s.className = "status " + (cls || ""); }
+  function dirty() { $("#dirtyDot").textContent = "● Unsaved changes"; $("#dirtyDot").className = "dot dirty"; }
+  function clean() { $("#dirtyDot").textContent = "All changes saved"; $("#dirtyDot").className = "dot"; }
 
-/* ---------- the form description ---------- */
-var SECTIONS = [
-  {id:'hero', label:'Top of page', title:'Top of the page',
-   hint:'The logo text, the three big words, your intro line and your photo.',
-   fields:[
-     ['brand','Logo text (top left corner)','text'],
-     ['hero.eyebrow','Small line above the big words','text'],
-     ['hero.word1','Big word 1','text'],
-     ['hero.word2','Big word 2 (the outlined one)','text'],
-     ['hero.word3','Big word 3','text'],
-     ['hero.lead','Intro paragraph','area'],
-     ['hero.badge','Green badge text','text'],
-     ['hero.badgeSub','Badge second line','text'],
-     ['profileImage','Your photo','image']
-   ]},
-  {id:'services', label:'01 Services', title:'Services',
-   hint:'What you offer. Add or remove as many as you like — they renumber themselves.',
-   fields:[['services.title','Section headline','text'],['services.intro','Section intro','area']],
-   list:{path:'services.items', label:'Service', add:{title:'New service', desc:'Describe it here.'},
-     fields:[['title','Name','text'],['desc','Description','area']]}},
-  {id:'work', label:'02 Work', title:'Selected work',
-   hint:'Your projects. "Card style" picks how the picture area looks — use "Photo on light background" for logos and "Photo, dark and moody" for product shots.',
-   fields:[['work.title','Section headline','text'],['work.intro','Section intro','area']],
-   list:{path:'projects', label:'Project',
-     add:{visual:'light', bg:'#ffffff', image:'', alt:'', mark:'', title:'New project', desc:'What it is and what you made.', kind:'Design'},
-     fields:[
-       ['title','Project name','text'],
-       ['desc','Description','area'],
-       ['kind','Small label (e.g. Logo design)','text'],
-       ['visual','Card style','select', [
-         ['light','Photo on light background'],
-         ['shot','Photo, dark and moody'],
-         ['vanta','Art card: sport lines'],
-         ['umbra','Art card: sunglasses'],
-         ['nova','Art card: glowing orb']
-       ]],
-       ['image','Picture','image'],
-       ['bg','Background colour behind the picture','color'],
-       ['mark','Word printed on the card (art cards only)','text'],
-       ['alt','Photo description for accessibility','text']
-     ]}},
-  {id:'motion', label:'03 Motion', title:'Motion — the video row',
-   hint:'Short videos of your work. Keep each one under about 4 MB, otherwise upload it by hand into the assets folder.',
-   fields:[['motion.title','Section headline','text'],['motion.intro','Section intro','area']],
-   list:{path:'reels', label:'Video',
-     add:{src:'', poster:'', ratio:'9/16', title:'', cap:'New video', sub:'Short description'},
-     fields:[
-       ['cap','Title on the card','text'],
-       ['sub','Small line under the title','text'],
-       ['src','Video file','video'],
-       ['poster','Still image shown before it plays','image'],
-       ['ratio','Shape','select', [['9/16','Tall phone video'],['25/22','Almost square'],['29/52','Very tall'],['16/9','Wide screen']]],
-       ['title','Description for accessibility','text']
-     ]}},
-  {id:'process', label:'04 Process', title:'Process',
-   hint:'The steps you take a client through.',
-   fields:[['process.title','Section headline','text'],['process.intro','Section intro','area']],
-   list:{path:'process.steps', label:'Step', add:{title:'New step', desc:'What happens here.'},
-     fields:[['title','Step name','text'],['desc','What happens','area']]}},
-  {id:'about', label:'05 About', title:'About you',
-   hint:'Your bio, the three counting numbers and the four quick facts.',
-   fields:[['about.quote','Big quote line','text'],['about.copy','Your bio','area']],
-   lists:[
-     {path:'about.stats', label:'Number', add:{value:'0', suffix:'', label:'New number'},
-      fields:[['value','Number','text'],['suffix','Letter after it (like h)','text'],['label','What it means','text']]},
-     {path:'about.facts', label:'Fact', add:{label:'New fact', value:'Details'},
-      fields:[['label','Fact name','text'],['value','Fact value','text']]}
-   ]},
-  {id:'contact', label:'Contact', title:'Contact block & your details',
-   hint:'Change your email or number here once and every button, link and the printed CV update together.',
-   fields:[
-     ['cta.eyebrow','Small line above the big invite','text'],
-     ['cta.title','Big invite headline (put *stars* around a word to make it italic gold)','text'],
-     ['cta.text','Invite paragraph','area'],
-     ['contact.email','Email address','text'],
-     ['contact.phoneDigits','WhatsApp / phone, digits only with country code','text'],
-     ['contact.phoneDisplay','How the number is written on the CV','text'],
-     ['contact.linkedin','LinkedIn address','text'],
-     ['contact.location','City shown in the footer','text']
-   ]},
-  {id:'extras', label:'Scrolling words', title:'The scrolling word strip',
-   hint:'The gold words that slide across under the first screen.',
-   fields:[],
-   list:{path:'marquee', label:'Word', plain:true, add:'New word', fields:[]}}
-];
-
-/* ---------- rendering ---------- */
-function fieldHtml(f, value, ref){
-  var key = f[0], label = f[1], type = f[2];
-  var idAttr = 'data-ref="' + esc(ref) + '"';
-  var h = '<div class="field"><label class="lbl">' + esc(label) + '</label>';
-  if(type === 'area'){
-    h += '<textarea ' + idAttr + '>' + esc(value) + '</textarea>';
-  } else if(type === 'select'){
-    h += '<select ' + idAttr + '>' + f[3].map(function(o){
-      return '<option value="' + esc(o[0]) + '"' + (String(value) === o[0] ? ' selected' : '') + '>' + esc(o[1]) + '</option>';
-    }).join('') + '</select>';
-  } else if(type === 'color'){
-    h += '<div style="display:flex;gap:10px;align-items:center">' +
-         '<input type="color" ' + idAttr + ' value="' + esc(/^#[0-9a-fA-F]{6}$/.test(value) ? value : '#ffffff') + '" style="width:58px;height:44px;padding:4px">' +
-         '<input type="text" data-mirror="' + esc(ref) + '" value="' + esc(value) + '" placeholder="#ffffff" style="max-width:160px">' +
-         '</div>';
-  } else if(type === 'image' || type === 'video'){
-    var isImg = type === 'image';
-    h += '<div class="thumb">';
-    if(isImg){
-      h += '<img src="' + esc(imgSrc(value)) + '" alt="" onerror="this.style.opacity=.15">';
-    }
-    h += '<div><span class="btn sm file">' + (isImg ? 'Choose a picture' : 'Choose a video') +
-         '<input type="file" accept="' + (isImg ? 'image/*' : 'video/*') + '" data-upload="' + esc(ref) + '" data-kind="' + type + '"></span>' +
-         '<div class="note" data-name="' + esc(ref) + '">' + (value ? esc(value) : 'nothing chosen yet') + '</div></div></div>';
-    h += '<input type="hidden" ' + idAttr + ' value="' + esc(value) + '">';
-  } else {
-    h += '<input type="text" ' + idAttr + ' value="' + esc(value) + '">';
+  /* ---------- field builders (return HTML) ---------- */
+  function fld(label, inner, hint) {
+    return '<div class="fld"><label>' + esc(label) + "</label>" + inner +
+      (hint ? '<div style="font-size:11.5px;color:var(--muted);margin-top:6px">' + esc(hint) + "</div>" : "") + "</div>";
   }
-  if(key === 'contact.phoneDigits') h += '<div class="note">Example: 96181191013 &mdash; no +, no spaces.</div>';
-  return h + '</div>';
-}
+  function fS(path, label, opts) {
+    opts = opts || {};
+    var v = getP(D, path);
+    var input = opts.ta
+      ? '<textarea data-bind="' + path + '">' + esc(v) + "</textarea>"
+      : '<input data-bind="' + path + '" value="' + esc(v) + '"' + (opts.ph ? ' placeholder="' + esc(opts.ph) + '"' : "") + ">";
+    return fld(label, input, opts.hint);
+  }
+  function fN(path, label) {
+    var v = getP(D, path);
+    return fld(label, '<input type="number" min="1" max="5" data-bind="' + path + '" data-type="number" value="' + esc(v) + '">');
+  }
+  function fC(path, label) {
+    var v = getP(D, path) || "#000000";
+    return fld(label, '<input type="color" data-bind="' + path + '" value="' + esc(v) + '" style="height:44px;padding:4px;cursor:pointer">');
+  }
+  function fBool(path, label) {
+    var v = !!getP(D, path);
+    return '<div class="fld"><label style="text-transform:none;letter-spacing:0;font-size:13.5px;display:flex;gap:10px;align-items:center;color:var(--paper);cursor:pointer"><input type="checkbox" data-bind="' + path + '"' + (v ? " checked" : "") + ' style="width:18px;height:18px;accent-color:#c6a66b;flex-shrink:0"> ' + esc(label) + "</label></div>";
+  }
+  function fBi(path, label, opts) {
+    opts = opts || {};
+    var en = getP(D, path + ".en"), ar = getP(D, path + ".ar");
+    var enI = opts.ta ? '<textarea data-bind="' + path + '.en">' + esc(en) + "</textarea>" : '<input data-bind="' + path + '.en" value="' + esc(en) + '"' + (opts.ph ? ' placeholder="' + esc(opts.ph) + '"' : "") + ">";
+    var arI = opts.ta ? '<textarea dir="rtl" data-bind="' + path + '.ar">' + esc(ar) + "</textarea>" : '<input dir="rtl" data-bind="' + path + '.ar" value="' + esc(ar) + '">';
+    return fld(label, '<div class="ar-row"><div class="col-l"><span class="tag">EN</span>' + enI + '</div><div class="col-l"><span class="tag">AR</span>' + arI + "</div></div>", opts.hint);
+  }
 
-function listHtml(spec){
-  var arr = get(spec.path) || [];
-  var out = '<h3 style="font-size:18px;margin:26px 0 12px">' + esc(spec.label) + 's <span style="color:var(--muted);font-family:inherit;font-size:13px">(' + arr.length + ')</span></h3>';
-  arr.forEach(function(item, i){
-    out += '<div class="item"><div class="item-top"><b>' + esc(spec.label) + ' ' + (i + 1) + '</b>' +
-      '<div class="spacer"></div>' +
-      '<button class="btn sm" data-move="' + esc(spec.path) + '" data-i="' + i + '" data-d="-1" title="Move up" aria-label="Move up">↑</button>' +
-      '<button class="btn sm" data-move="' + esc(spec.path) + '" data-i="' + i + '" data-d="1" title="Move down" aria-label="Move down">↓</button>' +
-      '<button class="btn sm danger" data-del="' + esc(spec.path) + '" data-i="' + i + '">Remove</button></div>';
-    if(spec.plain){
-      out += fieldHtml(['v', spec.label, 'text'], item, spec.path + '.' + i);
-    } else {
-      spec.fields.forEach(function(f){
-        out += fieldHtml(f, item[f[0]], spec.path + '.' + i + '.' + f[0]);
+  /* ---------- list editor ---------- */
+  function itemTitle(it, fields) {
+    for (var i = 0; i < fields.length; i++) {
+      var f = fields[i];
+      if (f.k == null) { if (it.en) return it.en; }
+      else if (f.bi && it[f.k] && it[f.k].en) return it[f.k].en;
+      else if (!f.bi && it[f.k]) return String(it[f.k]);
+    }
+    return "Item";
+  }
+  function fieldHtml(base, it, f) {
+    if (f.k == null) {
+      return '<div class="ar-row">' +
+        '<div class="col-l"><span class="tag">EN</span>' + (f.ta ? '<textarea data-bind="' + base + '.en">' + esc(it.en) + "</textarea>" : '<input data-bind="' + base + '.en" value="' + esc(it.en) + '">') + "</div>" +
+        '<div class="col-l"><span class="tag">AR</span>' + (f.ta ? '<textarea dir="rtl" data-bind="' + base + '.ar">' + esc(it.ar) + "</textarea>" : '<input dir="rtl" data-bind="' + base + '.ar" value="' + esc(it.ar) + '">') + "</div></div>";
+    }
+    var p = base + "." + f.k;
+    if (f.bi) return fBi(p, f.label || f.k, { ta: f.ta, ph: f.ph, hint: f.hint });
+    if (f.type === "number") return fN(p, f.label || f.k);
+    return fS(p, f.label || f.k, { ta: f.ta, ph: f.ph, hint: f.hint });
+  }
+  function fList(path, label, fields, opts) {
+    opts = opts || {};
+    var items = getP(D, path) || [];
+    var html = '<div class="sec"><h2>' + esc(label) + "</h2>" + (opts.hint ? '<p class="hint">' + esc(opts.hint) + "</p>" : "");
+    items.forEach(function (it, i) {
+      var base = path + "." + i;
+      html += '<div class="item"><div class="item-head"><span class="t">' + (i + 1) + ". " + esc(itemTitle(it, fields)) + "</span>" +
+        '<span class="acts">' +
+        '<button class="mini" data-act="up" data-path="' + path + '" data-i="' + i + '" title="Move up">↑</button>' +
+        '<button class="mini" data-act="down" data-path="' + path + '" data-i="' + i + '" title="Move down">↓</button>' +
+        '<button class="mini danger" data-act="del" data-path="' + path + '" data-i="' + i + '" title="Delete">✕</button>' +
+        "</span></div>";
+      fields.forEach(function (f) { html += '<div class="fld">' + fieldHtml(base, it, f) + "</div>"; });
+      if (opts.nested) {
+        html += '<div class="sub-list"><div class="lbl">' + esc(opts.nested.label) + "</div>" + subList(path + "." + i + "." + opts.nested.key, opts.nested.fields) + "</div>";
+      }
+      html += "</div>";
+    });
+    html += '<button class="add-btn" data-act="add" data-path="' + path + '">+ ' + esc(opts.addLabel || "Add item") + "</button></div>";
+    return html;
+  }
+  function subList(path, fields) {
+    var items = getP(D, path) || [];
+    var html = "";
+    items.forEach(function (it, i) {
+      var base = path + "." + i;
+      html += '<div class="sub-item"><div class="grow">';
+      fields.forEach(function (f) {
+        if (f.bi) {
+          html += '<div class="ar-row" style="margin-bottom:8px"><div class="col-l"><span class="tag">EN</span><input data-bind="' + base + "." + f.k + '.en" value="' + esc(getP(D, base + "." + f.k + ".en")) + '"></div><div class="col-l"><span class="tag">AR</span><input dir="rtl" data-bind="' + base + "." + f.k + '.ar" value="' + esc(getP(D, base + "." + f.k + ".ar")) + '"></div></div>';
+        } else {
+          html += '<input style="margin-bottom:8px" data-bind="' + base + "." + f.k + '" value="' + esc(getP(D, base + "." + f.k)) + '" placeholder="' + esc(f.label || f.k) + '">';
+        }
+      });
+      html += '</div><button class="mini danger" data-act="del" data-path="' + path + '" data-i="' + i + '" title="Delete">✕</button></div>';
+    });
+    html += '<button class="add-btn" data-act="add" data-path="' + path + '">+ Add</button>';
+    return html;
+  }
+  function sec(title, hint, inner) {
+    return '<div class="sec"><h2>' + esc(title) + "</h2>" + (hint ? '<p class="hint">' + esc(hint) + "</p>" : "") + inner + "</div>";
+  }
+
+  /* ---------- tabs ---------- */
+  var TABS = [
+    ["general", "General"],
+    ["hero", "Hero"],
+    ["services", "Services"],
+    ["cases", "Case studies"],
+    ["reviews", "Reviews"],
+    ["process", "Process"],
+    ["about", "About"],
+    ["faq", "FAQ"],
+    ["pages", "Pages"],
+    ["seo", "SEO"],
+    ["labels", "Labels & buttons"],
+    ["theme", "Theme"]
+  ];
+
+  function renderTabs() {
+    $("#tabs").innerHTML = TABS.map(function (t) {
+      return '<button class="tab' + (t[0] === TAB ? " on" : "") + '" data-tab="' + t[0] + '">' + t[1] + "</button>";
+    }).join("");
+  }
+
+  function renderPane() {
+    var h = "";
+    if (TAB === "general") {
+      h += sec("Brand & contact", "Used across the whole site — buttons, footer, WhatsApp checkout, search engines.",
+        '<div class="grid2">' + fS("brand", "Brand name") + fS("meta.founder", "Founder name") + "</div>" +
+        '<div class="grid2">' + fS("meta.email", "Email") + fS("meta.phoneDigits", "WhatsApp digits", { hint: "Digits only, country code first, no + or spaces (e.g. 96181191013)." }) + "</div>" +
+        '<div class="grid2">' + fS("meta.phoneDisplay", "Phone (display)") + fS("meta.instagram", "Instagram URL", { ph: "https://instagram.com/... — empty hides the link" }) + "</div>" +
+        fBi("meta.promise", "Reply promise phrase", { hint: "Shown wherever the site says how fast you reply — e.g. “within minutes”." }) +
+        '<div class="grid2">' + fS("meta.city", "City") + fS("meta.country", "Country") + "</div>");
+      h += sec("Site URL & analytics", "Site URL feeds share links, sitemap data and search-engine cards. GA4 ID enables Google Analytics; empty means no tracking.",
+        '<div class="grid2">' + fS("meta.siteUrl", "Site URL", { ph: "https://xarv.vercel.app" }) + fS("meta.gaId", "Google Analytics ID", { ph: "G-XXXXXXXXXX — empty = off" }) + "</div>");
+      h += sec("Images", "Paths inside the assets folder (or full URLs). Logos swap automatically with the visitor's device theme.",
+        '<div class="grid2">' + fS("assets.logoLight", "Logo — light theme") + fS("assets.logoDark", "Logo — dark theme") + "</div>" +
+        '<div class="grid2">' + fS("assets.portrait", "Portrait photo") + fS("assets.ogCover", "Link-preview cover") + "</div>" +
+        fS("assets.portraitAlt", "Portrait alt text (for search engines)"));
+    }
+    if (TAB === "hero") {
+      h += sec("Top of the homepage", "The first thing visitors see. The middle word shows as an outline.",
+        fBi("hero.eyebrow", "Eyebrow line") +
+        '<div class="grid3">' + fBi("hero.word1", "Word 1") + fBi("hero.word2", "Word 2 (outline)") + fBi("hero.word3", "Word 3") + "</div>" +
+        fBi("hero.lead", "Intro paragraph", { ta: true }) +
+        '<div class="grid2">' + fBi("hero.ctaWork", "Button — primary") + fBi("hero.ctaWa", "Button — WhatsApp") + "</div>" +
+        '<div class="grid2">' + fBi("hero.badge", "Badge on photo") + fBi("hero.badgeSub", "Badge sub-line") + "</div>" +
+        '<div class="grid2">' + fBi("hero.promise", "Reply promise chip", { hint: "Use {promise} where the promise phrase goes (set in the General tab)." }) + fBi("hero.scrollNote", "Scroll hint") + "</div>");
+    }
+    if (TAB === "services") {
+      h += sec("Section heading", "", fS("services.num", "Section number") + fBi("services.label", "Small label (e.g. SERVICES)") + fBi("services.title", "Heading") + fBi("services.intro", "Intro", { ta: true }));
+      h += fList("services.items", "Service items", [
+        { k: "title", bi: true },
+        { k: "desc", bi: true, ta: true, label: "Description" },
+        { k: "price", label: "Price", ph: "$99 — leave empty to show no price" },
+        { k: "image", label: "Photo", ph: "assets/photo.jpg — leave empty for the gold letter tile" },
+        { k: "alt", label: "Photo description (alt text)", ph: "Describe the photo for search engines" }
+      ], { hint: "Each item gets an “Add to cart” and a “WhatsApp now” button automatically.", addLabel: "Add service" });
+    }
+    if (TAB === "cases") {
+      h += sec("Section heading", "", fS("cases.num", "Section number") + fBi("cases.label", "Small label") + fBi("cases.title", "Heading") + fBi("cases.intro", "Intro", { ta: true }));
+      h += sec("Row labels", "", '<div class="grid3">' + fBi("cases.labels.problem", "Problem label") + fBi("cases.labels.solution", "Solution label") + fBi("cases.labels.result", "Result label") + "</div>");
+      h += fList("cases.items", "Case studies", [
+        { k: "tag", bi: true, label: "Tag", ph: "Beauty · Beirut" },
+        { k: "title", bi: true },
+        { k: "problem", bi: true, ta: true },
+        { k: "solution", bi: true, ta: true },
+        { k: "result", bi: true, ta: true }
+      ], { addLabel: "Add case study", nested: { key: "stats", label: "Stat chips", fields: [{ k: "v", label: "Value (+38%)" }, { k: "l", bi: true, label: "Label" }] } });
+    }
+    if (TAB === "reviews") {
+      h += sec("Section heading", "", fS("reviews.num", "Section number") + fBi("reviews.label", "Small label") + fBi("reviews.title", "Heading") + fBi("reviews.intro", "Intro", { ta: true }));
+      h += fList("reviews.items", "Reviews", [
+        { k: "rating", type: "number", label: "Stars (1–5)" },
+        { k: "text", bi: true, ta: true, label: "Review text" },
+        { k: "author", bi: true, label: "Author" },
+        { k: "detail", bi: true, label: "Detail (city, business)" }
+      ], { hint: "These also power the star ratings search engines can show.", addLabel: "Add review" });
+    }
+    if (TAB === "process") {
+      h += sec("Section heading", "", fS("process.num", "Section number") + fBi("process.label", "Small label") + fBi("process.title", "Heading") + fBi("process.intro", "Intro", { ta: true }));
+      h += fList("process.steps", "Steps", [{ k: "title", bi: true }, { k: "desc", bi: true, ta: true, label: "Description" }], { addLabel: "Add step" });
+      h += sec("Terminal card", "The little code window.", fBi("process.terminal.title", "Terminal title"));
+      h += fList("process.terminal.lines", "Terminal lines", [{ k: null, bi: true }], { addLabel: "Add line" });
+    }
+    if (TAB === "about") {
+      h += sec("About / founder", "",
+        fS("about.num", "Section number") + fBi("about.label", "Small label") + fBi("about.quote", "Big quote") +
+        fBi("about.title", "Name line") + fBi("about.copy", "Paragraph 1", { ta: true }) + fBi("about.copy2", "Paragraph 2", { ta: true }));
+      h += fList("about.stats", "Stats row", [{ k: "v", bi: true, label: "Value" }, { k: "l", bi: true, label: "Label" }], { addLabel: "Add stat" });
+      h += fList("about.facts", "Facts grid", [{ k: "label", bi: true }, { k: "value", bi: true }], { addLabel: "Add fact" });
+    }
+    if (TAB === "faq") {
+      h += sec("Section heading", "", fS("faq.num", "Section number") + fBi("faq.label", "Small label") + fBi("faq.title", "Heading") + fBi("faq.intro", "Intro", { ta: true }));
+      h += fList("faq.items", "Questions", [{ k: "q", bi: true, label: "Question" }, { k: "a", bi: true, ta: true, label: "Answer" }], { hint: "These also feed the FAQ data search engines read.", addLabel: "Add question" });
+    }
+    if (TAB === "pages") {
+      h += sec("Privacy Policy page", "", fBi("pages.privacy.crumb", "Breadcrumb") + fBi("pages.privacy.h", "Title") + fBi("pages.privacy.updated", "Updated line") + fBi("pages.privacy.intro", "Intro", { ta: true }));
+      h += fList("pages.privacy.sections", "Privacy sections", [{ k: "h", bi: true, label: "Heading" }, { k: "p", bi: true, ta: true, label: "Text" }], { addLabel: "Add section" });
+      h += sec("Thank-you page", "Shown after a cart checkout.", fS("pages.thankyou.code", "Big symbol (✓)") + fBi("pages.thankyou.crumb", "Breadcrumb") + fBi("pages.thankyou.h", "Title") + fBi("pages.thankyou.p", "Text", { ta: true }) + '<div class="grid2">' + fBi("pages.thankyou.b1", "Button 1") + fBi("pages.thankyou.b2", "Button 2") + "</div>");
+      h += sec("404 page", "", fS("pages.notfound.code", "Big code") + fBi("pages.notfound.h", "Title") + fBi("pages.notfound.p", "Text", { ta: true }) + '<div class="grid2">' + fBi("pages.notfound.b1", "Button 1") + fBi("pages.notfound.b2", "Button 2") + "</div>");
+    }
+    if (TAB === "seo") {
+      h += sec("Search titles & descriptions", "Each page gets its own title and description — what shows in Google and link previews.",
+        sec("Home", "", fBi("seo.home.title", "Title") + fBi("seo.home.desc", "Description", { ta: true })) +
+        sec("Privacy", "", fBi("seo.privacy.title", "Title") + fBi("seo.privacy.desc", "Description", { ta: true })) +
+        sec("Thank you", "", fBi("seo.thankyou.title", "Title") + fBi("seo.thankyou.desc", "Description", { ta: true })) +
+        sec("404", "", fBi("seo.notfound.title", "Title") + fBi("seo.notfound.desc", "Description", { ta: true })));
+    }
+    if (TAB === "labels") {
+      h += sec("Menu", "", '<div class="grid2">' + fBi("nav.services", "Services") + fBi("nav.work", "Case studies") + fBi("nav.reviews", "Reviews") + fBi("nav.process", "Process") + fBi("nav.about", "About") + fBi("nav.faq", "FAQ") + "</div>" + fBi("nav.cta", "Menu button"));
+      h += sec("Cart", "", fBi("cart.title", "Cart title") + fBi("cart.empty", "Empty message", { ta: true }) + '<div class="grid2">' + fBi("cart.addBtn", "Add to cart") + fBi("cart.addedBtn", "Added state") + fBi("cart.waBtn", "WhatsApp-now button") + fBi("cart.remove", "Remove") + "</div>" + fBi("cart.checkout", "Checkout button") + fBi("cart.note", "Note under checkout", { ta: true }) + fBi("cart.orderIntro", "First line of the WhatsApp order", { ta: true }));
+      h += sec("Footer", "", fBi("footer.tag", "Tagline") + fBi("footer.copy", "Copyright line") + '<div class="grid2">' + fBi("footer.founderLabel", "Founder line") + fBi("footer.privacyLink", "Privacy link") + fBi("footer.adminLink", "Admin link") + fBi("footer.exploreHead", "Explore column") + fBi("footer.contactHead", "Contact column") + "</div>");
+      h += sec("Small bits", "", '<div class="grid2">' + fBi("sticky.cta", "Sticky mobile button") + fBi("crumbs.home", "Breadcrumb “Home”") + fBi("misc.skipTo", "Skip-to-content") + fBi("misc.langLabel", "Language button") + "</div>");
+      h += fList("marquee", "Scrolling strip", [{ k: null, bi: true }], { addLabel: "Add word" });
+    }
+    if (TAB === "theme") {
+      h += sec("Colors", "The two themes. Visitors see the one matching their device.",
+        '<div class="grid3">' + fC("theme.bgDark", "Background — dark") + fC("theme.goldDark", "Gold — dark") + fC("theme.gold2Dark", "Bright gold — dark") + "</div>" +
+        '<div class="grid3">' + fC("theme.bgLight", "Background — light") + fC("theme.goldLight", "Gold — light") + fC("theme.gold2Light", "Deep gold — light") + "</div>");
+      h += sec("Features", "Turn whole site features on or off.",
+        '<div class="grid2">' + fBool("features.grain", "Film-grain texture") + fBool("features.glow", "Gold glow") + fBool("features.cursor", "Custom cursor") + fBool("features.progress", "Scroll progress bar") + fBool("features.marquee", "Scrolling strip") + fBool("features.stickyCta", "Sticky mobile button bar") + "</div>");
+    }
+    $("#pane").innerHTML = h;
+  }
+
+  /* ---------- new-item templates ---------- */
+  function bi() { return { en: "", ar: "" }; }
+  function newItem(path) {
+    var key = path.replace(/\.\d+/g, "");
+    var id = Date.now().toString(36);
+    if (key === "services.items") return { id: "s" + id, title: bi(), desc: bi(), price: "", image: "", alt: "" };
+    if (key === "cases.items") return { id: "cs" + id, tag: bi(), title: bi(), problem: bi(), solution: bi(), result: bi(), stats: [] };
+    if (key === "cases.items.stats") return { v: "", l: bi() };
+    if (key === "reviews.items") return { id: "r" + id, rating: 5, text: bi(), author: bi(), detail: bi() };
+    if (key === "process.steps") return { title: bi(), desc: bi() };
+    if (key === "faq.items") return { id: "f" + id, q: bi(), a: bi() };
+    if (key === "about.stats") return { v: bi(), l: bi() };
+    if (key === "about.facts") return { label: bi(), value: bi() };
+    if (key === "pages.privacy.sections") return { h: bi(), p: bi() };
+    return bi();
+  }
+
+  /* ---------- events ---------- */
+  $("#tabs").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-tab]");
+    if (b) { TAB = b.getAttribute("data-tab"); renderTabs(); renderPane(); }
+  });
+  $("#pane").addEventListener("input", function (e) {
+    var el = e.target.closest("[data-bind]");
+    if (!el) return;
+    var v = el.type === "checkbox" ? el.checked : el.value;
+    if (el.getAttribute("data-type") === "number") v = parseInt(v, 10) || 0;
+    setP(D, el.getAttribute("data-bind"), v);
+    dirty();
+    status("Unsaved changes", "");
+  });
+  $("#pane").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-act]");
+    if (!b) return;
+    var path = b.getAttribute("data-path");
+    var arr = getP(D, path) || [];
+    var act = b.getAttribute("data-act");
+    var i = parseInt(b.getAttribute("data-i"), 10);
+    if (act === "add") { arr.push(newItem(path)); setP(D, path, arr); }
+    if (act === "del") { if (!confirm("Delete this item?")) return; arr.splice(i, 1); }
+    if (act === "up" && i > 0) { var t = arr[i - 1]; arr[i - 1] = arr[i]; arr[i] = t; }
+    if (act === "down" && i < arr.length - 1) { var t2 = arr[i + 1]; arr[i + 1] = arr[i]; arr[i] = t2; }
+    dirty();
+    renderPane();
+  });
+
+  /* ---------- actions ---------- */
+  function creds() { return { username: USER, password: PASS }; }
+  $("#previewBtn").addEventListener("click", function () {
+    try { localStorage.setItem("xarv-admin-draft", JSON.stringify(D)); } catch (e) {}
+    window.open("../index.html", "_blank");
+    status("Draft opened in a new tab — only YOUR browser shows it. Publish to make it live for everyone.", "ok");
+  });
+  $("#clearDraftBtn").addEventListener("click", function () {
+    try { localStorage.removeItem("xarv-admin-draft"); } catch (e) {}
+    status("Preview cleared. Your browser shows the published site again.", "ok");
+  });
+  $("#downloadBtn").addEventListener("click", function () {
+    var blob = new Blob([JSON.stringify(D, null, 2)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "content.json";
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+    status("Downloaded content.json — upload it to GitHub over the old one to publish manually.", "ok");
+  });
+  $("#publishBtn").addEventListener("click", async function () {
+    if (!ONLINE) { status("Publish is not available on this server. Use Download content.json and upload it to GitHub.", "err"); return; }
+    var btn = $("#publishBtn");
+    btn.disabled = true;
+    status("Publishing…", "");
+    try {
+      var res = await fetch("/api/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: USER, password: PASS, content: D })
+      });
+      var out = await res.json().catch(function () { return {}; });
+      if (res.ok) {
+        try { localStorage.removeItem("xarv-admin-draft"); } catch (e) {}
+        clean();
+        status("Published ✓ Live for everyone in ~30 seconds — then hard-refresh the site (Ctrl+Shift+R).", "ok");
+      } else {
+        status(out.error || "Publish failed.", "err");
+      }
+    } catch (e) {
+      status("Publish is not available on this server. Use Download content.json and upload it to GitHub.", "err");
+    }
+    btn.disabled = false;
+  });
+  $("#logoutBtn").addEventListener("click", function () {
+    try { sessionStorage.removeItem("xarv-admin"); } catch (e) {}
+    location.reload();
+  });
+
+  /* ---------- boot ---------- */
+  function enterEditor() {
+    $("#loginView").hidden = true;
+    $("#editorView").hidden = false;
+    renderTabs();
+    if (D) { renderPane(); }
+    else { $("#pane").innerHTML = '<div class="loadfile">Could not load content.json automatically.<br>If you opened this file from your computer, pick content.json manually — or open this page on your live site.<br><input type="file" id="fileLoad" accept="application/json"></div>';
+      $("#fileLoad").addEventListener("change", function (e) {
+        var f = e.target.files[0];
+        if (!f) return;
+        var r = new FileReader();
+        r.onload = function () { try { D = JSON.parse(r.result); renderPane(); status("Loaded " + f.name, "ok"); } catch (err) { status("That file is not valid content.json", "err"); } };
+        r.readAsText(f);
       });
     }
-    out += '</div>';
+    var draft = null;
+    try { draft = localStorage.getItem("xarv-admin-draft"); } catch (e) {}
+    if (draft && D) {
+      $("#pane").insertAdjacentHTML("afterbegin", '<div class="banner">You have an unpublished draft in this browser. <button class="btn sm" id="resumeDraft">Resume draft</button> <button class="btn sm" id="discardDraft">Discard draft</button></div>');
+      $("#resumeDraft").addEventListener("click", function () { try { D = JSON.parse(draft); } catch (e) {} renderPane(); dirty(); });
+      $("#discardDraft").addEventListener("click", function () { try { localStorage.removeItem("xarv-admin-draft"); } catch (e) {} renderPane(); });
+    }
+    if (!ONLINE) {
+      $("#pane").insertAdjacentHTML("afterbegin", '<div class="banner warn">No publish server here (opened from a file, or api/ not deployed yet). You can still edit and use "Download content.json".</div>');
+      $("#publishBtn").disabled = true;
+    }
+  }
+
+  async function boot() {
+    try {
+      var r = await fetch("../content.json", { cache: "no-store" });
+      if (r.ok) { var j = await r.json(); if (j && typeof j === "object") D = j; }
+    } catch (e) {}
+    if (!D) {
+      try { var dr = localStorage.getItem("xarv-admin-draft"); if (dr) D = JSON.parse(dr); } catch (e) {}
+    }
+    var saved = null;
+    try { saved = sessionStorage.getItem("xarv-admin"); } catch (e) {}
+    if (saved) {
+      var parts = saved.split("\n");
+      USER = parts[0]; PASS = parts.slice(1).join("\n");
+      enterEditor();
+    }
+  }
+
+  $("#loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var u = $("#user").value.trim(), p = $("#pass").value;
+    $("#loginErr").textContent = "";
+    $("#loginBtn").disabled = true;
+    try {
+      var res = await fetch("/api/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: u, password: p, verifyOnly: true })
+      });
+      var out = await res.json().catch(function () { return null; });
+      if (out == null) throw new Error("offline");
+      if (res.ok) {
+        USER = u; PASS = p;
+        try { sessionStorage.setItem("xarv-admin", u + "\n" + p); } catch (e2) {}
+        enterEditor();
+      } else {
+        $("#loginErr").textContent = out.error || "Login failed.";
+      }
+    } catch (err) {
+      ONLINE = false;
+      USER = u; PASS = p;
+      try { sessionStorage.setItem("xarv-admin", u + "\n" + p); } catch (e2) {}
+      enterEditor();
+    }
+    $("#loginBtn").disabled = false;
   });
-  out += '<button class="btn" data-add="' + esc(spec.path) + '">+ Add a ' + esc(spec.label).toLowerCase() + '</button>';
-  return out;
-}
 
-function render(){
-  el('side').innerHTML = SECTIONS.map(function(s){
-    return '<button data-sec="' + s.id + '" class="' + (s.id === activeSection ? 'on' : '') + '">' + esc(s.label) + '</button>';
-  }).join('');
-
-  el('main').innerHTML = SECTIONS.map(function(s){
-    var h = '<section class="panel ' + (s.id === activeSection ? 'on' : '') + '" data-panel="' + s.id + '">' +
-      '<h2>' + esc(s.title) + '</h2><p class="hint">' + esc(s.hint) + '</p>';
-    s.fields.forEach(function(f){ h += fieldHtml(f, get(f[0]), f[0]); });
-    (s.list ? [s.list] : (s.lists || [])).forEach(function(spec){ h += listHtml(spec); });
-    return h + '</section>';
-  }).join('');
-}
-
-/* ---------- writing values back ---------- */
-function writeRef(ref, value){
-  var parts = ref.split('.');
-  var idx = parts.findIndex(function(p){ return /^\d+$/.test(p); });
-  if(idx === -1){ set(ref, value); return; }
-  var arr = get(parts.slice(0, idx).join('.')) || [];
-  var i = parseInt(parts[idx], 10);
-  var rest = parts.slice(idx + 1);
-  if(!rest.length) arr[i] = value; else arr[i][rest.join('.')] = value;
-}
-
-document.addEventListener('input', function(e){
-  var t = e.target;
-  if(t.dataset && t.dataset.ref !== undefined && t.type !== 'file'){
-    writeRef(t.dataset.ref, t.value);
-    if(t.type === 'color'){
-      var m = document.querySelector('[data-mirror="' + t.dataset.ref + '"]');
-      if(m) m.value = t.value;
-    }
-    touch();
-  }
-  if(t.dataset && t.dataset.mirror !== undefined){
-    writeRef(t.dataset.mirror, t.value);
-    var c = document.querySelector('[data-ref="' + t.dataset.mirror + '"]');
-    if(c && /^#[0-9a-fA-F]{6}$/.test(t.value)) c.value = t.value;
-    touch();
-  }
-});
-
-/* ---------- uploads ---------- */
-function slug(name){
-  return String(name).toLowerCase().replace(/\.[^.]+$/,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40) || 'file';
-}
-function shrinkImage(file){
-  return new Promise(function(res, rej){
-    var fr = new FileReader();
-    fr.onload = function(){
-      var img = new Image();
-      img.onload = function(){
-        var max = 1500, w = img.width, h = img.height;
-        if(Math.max(w, h) > max){ var r = max / Math.max(w, h); w = Math.round(w * r); h = Math.round(h * r); }
-        var cv = document.createElement('canvas');
-        cv.width = w; cv.height = h;
-        cv.getContext('2d').drawImage(img, 0, 0, w, h);
-        res(cv.toDataURL('image/jpeg', 0.82));
-      };
-      img.onerror = function(){ res(fr.result); };
-      img.src = fr.result;
-    };
-    fr.onerror = rej;
-    fr.readAsDataURL(file);
-  });
-}
-function readRaw(file){
-  return new Promise(function(res, rej){
-    var fr = new FileReader();
-    fr.onload = function(){ res(fr.result); };
-    fr.onerror = rej;
-    fr.readAsDataURL(file);
-  });
-}
-document.addEventListener('change', async function(e){
-  var t = e.target;
-  if(!t.dataset || t.dataset.upload === undefined) return;
-  var file = t.files && t.files[0];
-  if(!file) return;
-  var ref = t.dataset.upload, kind = t.dataset.kind;
-  say('Preparing ' + file.name + '…');
-  try{
-    var dataUrl = kind === 'image' ? await shrinkImage(file) : await readRaw(file);
-    var base64 = dataUrl.split(',')[1];
-    var bytes = Math.round(base64.length * 0.75);
-    if(bytes > 4.4 * 1024 * 1024){
-      say('That file is ' + (bytes / 1048576).toFixed(1) + ' MB — too big to publish through this page. Put it in the assets folder by hand instead.', 'err');
-      t.value = '';
-      return;
-    }
-    var ext = kind === 'image' ? 'jpg' : (file.name.split('.').pop() || 'mp4').toLowerCase().replace(/[^a-z0-9]/g,'');
-    var path = 'assets/uploads/' + slug(file.name) + '-' + Date.now().toString(36) + '.' + ext;
-    UPLOADS = UPLOADS.filter(function(u){ return u.ref !== ref; });
-    UPLOADS.push({ref:ref, path:path, base64:base64});
-    PREVIEW[path] = dataUrl;
-    writeRef(ref, path);
-    var hidden = document.querySelector('[data-ref="' + ref + '"]');
-    if(hidden) hidden.value = path;
-    var nameNote = document.querySelector('[data-name="' + ref + '"]');
-    if(nameNote) nameNote.textContent = path + '  (' + (bytes / 1024).toFixed(0) + ' KB)';
-    var box = t.closest('.field');
-    var prev = box && box.querySelector('img');
-    if(prev){ prev.src = dataUrl; prev.style.opacity = 1; }
-    touch();
-    say('Ready to publish: ' + file.name, 'ok');
-  }catch(err){
-    say('Could not read that file: ' + err.message, 'err');
-  }
-});
-
-/* ---------- clicks ---------- */
-document.addEventListener('click', function(e){
-  var b = e.target.closest('button');
-  if(!b) return;
-  var d = b.dataset;
-  if(d.sec){ activeSection = d.sec; render(); window.scrollTo({top:0, behavior:'smooth'}); return; }
-  if(d.add !== undefined){
-    var spec = null;
-    SECTIONS.forEach(function(s){ (s.list ? [s.list] : (s.lists || [])).forEach(function(x){ if(x.path === d.add) spec = x; }); });
-    var arr = get(d.add) || [];
-    arr.push(typeof spec.add === 'string' ? spec.add : JSON.parse(JSON.stringify(spec.add)));
-    set(d.add, arr); touch(); render(); return;
-  }
-  if(d.del !== undefined){
-    var arr2 = get(d.del) || [];
-    var label = typeof arr2[d.i] === 'string' ? arr2[d.i] : (arr2[d.i].title || arr2[d.i].cap || arr2[d.i].label || 'this one');
-    if(!confirm('Remove "' + label + '" ?')) return;
-    arr2.splice(parseInt(d.i, 10), 1); touch(); render(); return;
-  }
-  if(d.move !== undefined){
-    var arr3 = get(d.move) || [], i = parseInt(d.i, 10), j = i + parseInt(d.d, 10);
-    if(j < 0 || j >= arr3.length) return;
-    var tmp = arr3[i]; arr3[i] = arr3[j]; arr3[j] = tmp;
-    touch(); render(); return;
-  }
-});
-
-/* ---------- login ---------- */
-async function tryAuth(pw){
-  var r = await fetch(API, {
-    method:'POST', headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({action:'auth', password:pw})
-  });
-  var j = null;
-  try{ j = await r.json(); }catch(e){}
-  return {status:r.status, body:j};
-}
-async function loadContent(){
-  var r = await fetch('../content.json?t=' + Date.now(), {cache:'no-store'});
-  if(!r.ok) throw new Error('content.json was not found next to index.html (status ' + r.status + ')');
-  var j = await r.json();
-  original = JSON.stringify(j);
-  data = JSON.parse(original);
-}
-function offerDraft(){
-  var raw = null;
-  try{ raw = localStorage.getItem(DRAFT); }catch(e){}
-  if(!raw) return;
-  try{
-    var saved = JSON.parse(raw);
-    if(JSON.stringify(saved.content) === original) return;
-    if(confirm('You have unpublished changes from last time in this browser. Load them?')){
-      data = saved.content;
-      UPLOADS = (saved.uploads || []).filter(function(u){ return u && u.path; });
-      say('Unpublished changes restored. Press Publish to put them online.');
-    } else {
-      localStorage.removeItem(DRAFT);
-    }
-  }catch(e){}
-}
-async function start(publishAllowed){
-  canPublish = publishAllowed;
-  await loadContent();
-  offerDraft();
-  el('gate').style.display = 'none';
-  el('shell').classList.add('on');
-  var pill = el('modePill');
-  if(canPublish){
-    pill.className = 'pill live';
-    pill.textContent = 'Publishing is on';
-  } else {
-    pill.className = 'pill off';
-    pill.textContent = 'Download mode';
-    el('publishBtn').style.display = 'none';
-    say('No publish server connected. Edit freely, then use “Download content.json” and upload that one file to your host.');
-  }
-  render();
-}
-
-el('loginBtn').addEventListener('click', async function(){
-  var pw = el('pw').value;
-  if(!pw){ gateMsg('Type your password first.'); return; }
-  el('loginBtn').textContent = 'Checking…';
-  try{
-    var res = await tryAuth(pw);
-    if(res.status === 200 && res.body && res.body.ok){
-      password = pw;
-      await start(true);
-    } else if(res.status === 401){
-      gateMsg('Wrong password.');
-    } else if(res.status === 404){
-      gateMsg('This site has no publish server yet, so the password cannot be checked.<br>Open <b>DEPLOY-ADMIN.txt</b> and follow it once, or press <b>Open without publishing</b> to edit and download the file instead.', 'warn');
-    } else {
-      gateMsg((res.body && res.body.error) ? esc(res.body.error) : 'The server answered with status ' + res.status + '.');
-    }
-  }catch(err){
-    gateMsg('Could not reach the server. If you opened this file straight from your computer, press <b>Open without publishing</b>.', 'warn');
-  }
-  el('loginBtn').textContent = 'Enter';
-});
-el('pw').addEventListener('keydown', function(e){ if(e.key === 'Enter') el('loginBtn').click(); });
-el('offlineBtn').addEventListener('click', async function(){
-  try{ await start(false); }
-  catch(err){ gateMsg(esc(err.message)); }
-});
-el('logoutBtn').addEventListener('click', function(){ location.reload(); });
-
-/* ---------- publish ---------- */
-el('publishBtn').addEventListener('click', async function(){
-  var btn = el('publishBtn');
-  btn.disabled = true;
-  btn.textContent = 'Publishing…';
-  say('Sending your changes…');
-  try{
-    var r = await fetch(API, {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({
-        action:'save',
-        password: password,
-        content: data,
-        uploads: UPLOADS.map(function(u){ return {path:u.path, base64:u.base64}; })
-      })
-    });
-    var j = null;
-    try{ j = await r.json(); }catch(e){}
-    if(r.ok && j && j.ok){
-      UPLOADS = [];
-      original = JSON.stringify(data);
-      try{ localStorage.removeItem(DRAFT); }catch(e){}
-      say('Published. Your website updates itself in about 30 seconds — then refresh it with Ctrl+Shift+R.', 'ok');
-    } else if(r.status === 401){
-      say('Password rejected. Log out and try again.', 'err');
-    } else {
-      say('Publish failed: ' + ((j && j.error) ? j.error : 'server status ' + r.status), 'err');
-    }
-  }catch(err){
-    say('Publish failed: ' + err.message, 'err');
-  }
-  btn.disabled = false;
-  btn.textContent = 'Publish to my website';
-});
-
-el('downloadBtn').addEventListener('click', function(){
-  var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-  var a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'content.json';
-  a.click();
-  URL.revokeObjectURL(a.href);
-  var extra = UPLOADS.length ? ' Remember to also copy your ' + UPLOADS.length + ' new file(s) into the assets/uploads folder.' : '';
-  say('content.json downloaded. Upload it next to index.html.' + extra, 'ok');
-});
-
-el('resetBtn').addEventListener('click', function(){
-  if(!confirm('Throw away every change you made since your last publish?')) return;
-  data = JSON.parse(original);
-  UPLOADS = []; PREVIEW = {};
-  try{ localStorage.removeItem(DRAFT); }catch(e){}
-  render();
-  say('Back to the published version.', 'ok');
-});
-
-window.addEventListener('beforeunload', function(e){
-  if(JSON.stringify(data) !== original){ e.preventDefault(); e.returnValue = ''; }
-});
+  boot();
 })();
 </script>
 </body>

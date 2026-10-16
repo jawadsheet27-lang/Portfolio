@@ -1,60 +1,68 @@
-TURNING ON YOUR OWN ADMIN PANEL   ( yourdomain.com/admin )
-==========================================================
+TURNING ON YOUR XARV ADMIN PANEL   ( yourdomain.com/admin )
+===========================================================
 
 You do this ONCE. About 15 minutes. Everything used here is free.
 
 What you end up with:
-  yourdomain.com          your portfolio
-  yourdomain.com/admin    a private page where you log in with a password,
-                          edit your text and pictures, and press Publish.
+  yourdomain.com          the XARV website
+  yourdomain.com/admin    a private page where you log in, edit EVERYTHING
+                          (every text in English + Arabic, services, prices,
+                          photos, reviews, case studies, FAQs, colors,
+                          analytics) and press Publish.
 
 
 STEP 1  -  MAKE A GITHUB ACCOUNT
 1. Go to github.com and sign up (free).
 2. Click the + at the top right  ->  New repository.
-3. Name it            jawad-portfolio
+3. Name it            xarv
 4. Choose Private, then Create repository.
 
 
 STEP 2  -  PUT YOUR SITE IN IT
 1. On the new empty repository page click  uploading an existing file.
-2. Unzip the portfolio folder on your computer, open it, select EVERYTHING
-   inside it (index.html, content.json, the assets folder, the admin folder,
-   the api folder, vercel.json, the txt files) and drag them into the page.
-   Upload the CONTENTS of the folder, not the folder itself.
+2. Unzip the xarv-site folder on your computer, open it, select EVERYTHING
+   inside it (index.html, privacy.html, thank-you.html, 404.html,
+   content.json, the assets folder, the admin folder, the api folder,
+   vercel.json, robots.txt, sitemap.xml, the txt files) and drag them into
+   the page. Upload the CONTENTS of the folder, not the folder itself.
 3. Click Commit changes and wait for the upload to finish.
 
 
 STEP 3  -  PUT IT ONLINE WITH VERCEL
 1. Go to vercel.com  ->  Sign up  ->  Continue with GitHub.
-2. Add New...  ->  Project  ->  find jawad-portfolio  ->  Import.
+2. Add New...  ->  Project  ->  find xarv  ->  Import.
 3. Leave every setting alone. Framework Preset: Other. No build command.
 4. Click Deploy and wait. You now have a live address such as
-   jawad-portfolio.vercel.app
+   xarv.vercel.app  (if you own the old project, you can deploy there
+   instead and keep your existing address).
 
-At this point your website is live. The admin panel still needs its password.
+At this point your website is live. The admin panel still needs its keys.
 
 
 STEP 4  -  MAKE A GITHUB TOKEN (this is what lets Publish work)
 1. Go to  github.com/settings/personal-access-tokens/new
-2. Token name:        portfolio admin
+2. Token name:        xarv admin
 3. Expiration:        No expiration (or 1 year, but then repeat this step)
-4. Repository access: Only select repositories  ->  choose jawad-portfolio
+4. Repository access: Only select repositories  ->  choose xarv
 5. Permissions  ->  Repository permissions  ->  find Contents  ->  set it to
    Read and write.
 6. Generate token, then COPY the long text that appears. You only see it once.
 
 
-STEP 5  -  TELL VERCEL YOUR PASSWORD AND YOUR TOKEN
+STEP 5  -  TELL VERCEL YOUR LOGIN AND YOUR TOKEN
 In Vercel: your project  ->  Settings  ->  Environment Variables.
-Add these four, one at a time:
+Add these five, one at a time:
 
    Name             Value
    --------------   ---------------------------------------------
-   ADMIN_PASSWORD   any password you invent, 12+ characters
+   ADMIN_USERNAME   jawad.xarv
+   ADMIN_PASSWORD   jawad@sheet2007
    GITHUB_TOKEN     the long token you copied in Step 4
-   GITHUB_REPO      yourgithubname/jawad-portfolio
+   GITHUB_REPO      yourgithubname/xarv
    GITHUB_BRANCH    main
+
+(These are the login details you asked for. You can change them here any
+time — they live only in Vercel's settings, never in the website files.)
 
 Then go to Deployments  ->  the newest one  ->  the ... menu  ->  Redeploy.
 Environment variables only take effect after a redeploy.
@@ -62,50 +70,44 @@ Environment variables only take effect after a redeploy.
 
 STEP 6  -  USE IT
 1. Open  your-address.vercel.app/admin
-2. Type your ADMIN_PASSWORD  ->  Enter.
-3. Edit anything: text, projects, videos, numbers, your photo, your phone.
-4. Press  Publish to my website.
-5. Wait about 30 seconds, then open your site and press Ctrl+Shift+R.
+2. Log in with your username and password.
+3. Edit anything, in English and Arabic.
+4. Optional: press "Preview draft" to see changes in YOUR browser only.
+5. Press "Publish to my website".
+6. Wait about 30 seconds, then open your site and press Ctrl+Shift+R.
 
 
 STEP 7  -  OPTIONAL: YOUR OWN DOMAIN NAME
 Buy a domain (Namecheap, Cloudflare, GoDaddy). In Vercel:
-Settings  ->  Domains  ->  Add  ->  paste your domain and follow the two lines
-it tells you to copy into your domain provider. Your admin page then lives at
-yourdomain.com/admin
-
-After you have a real domain, open index.html and change this one line so link
-previews on WhatsApp and LinkedIn work:
-     <meta property="og:image" content="assets/og-cover.jpg">
-becomes
-     <meta property="og:image" content="https://yourdomain.com/assets/og-cover.jpg">
+Settings  ->  Domains  ->  Add  ->  paste your domain and follow the two
+lines it tells you to copy into your domain provider.
+After that, open the admin  ->  General tab  ->  set "Site URL" to your new
+domain and publish, so share links and search-engine data point to it.
+Also update the Sitemap line inside robots.txt and sitemap.xml once.
 
 
 HOW SAFE IS THIS?
-- Your password and your token live only in Vercel's settings, never in the
-  website files, and are never sent to a visitor's browser.
-- Anyone who knows the address can SEE the login box. Without the password they
-  can change nothing. Use a long password and do not share the link.
-- Every publish is saved as a version in GitHub, so nothing is ever really lost.
+- Your username, password and token live only in Vercel's settings, never in
+  the website files, and are never sent to a visitor's browser.
+- Anyone who knows the address can SEE the login box. Without the password
+  they can change nothing.
+- Every publish is saved as a version in GitHub, so nothing is ever lost.
   If you ever break your text, GitHub can restore the previous content.json.
 
 
 IF SOMETHING GOES WRONG
-- "This site has no publish server yet"
-  You are opening the file from your computer, or the api folder was not
+- "Publish is not available on this server"
+  You are opening the files from your computer, or the api folder was not
   uploaded. Check that api/save.js exists in your GitHub repository.
 - "This site is missing its settings"
   Step 5 is incomplete, or you did not redeploy afterwards.
-- "Wrong password"
-  ADMIN_PASSWORD in Vercel is not what you typed. Spaces count.
+- "Wrong username or password"
+  ADMIN_USERNAME / ADMIN_PASSWORD in Vercel do not match what you typed.
+  Spaces count.
 - "GitHub refused to write"
-  The token has expired, or GITHUB_REPO is misspelled, or the token was not
-  given Contents: Read and write.
+  The token expired, GITHUB_REPO is misspelled, or the token was not given
+  Contents: Read and write.
 - Publish worked but the site looks the same
-  Wait 30 seconds for the rebuild, then Ctrl+Shift+R. Check Vercel Deployments
-  to see the new build appear.
-
-
-NETLIFY INSTEAD OF VERCEL?
-It works too, but api/save.js must be moved to netlify/functions/save.js and a
-redirect added. Ask me and I will send that version.
+  Wait 30 seconds for the rebuild, then Ctrl+Shift+R. If you used
+  "Preview draft" earlier, press "Clear preview" in the admin once — your
+  browser may still be showing your draft copy.
